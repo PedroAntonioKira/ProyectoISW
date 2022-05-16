@@ -15,12 +15,17 @@
     <link rel="stylesheet" href="css/CarruselPrincipal.css">
     <link rel="stylesheet" href="css/Tarjeta.css">
     <link rel="stylesheet" href="css/Footer.css">
-    
 
 </head>
-<body>
-
+<body >
     <header>
+        <nav class="py-1 bg-light border-bottom">
+            <div class="container d-flex flex-wrap justify-content-end">
+                <ul class="nav">
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Iniciar Sesión</a></li>
+                </ul>
+            </div>
+        </nav>
         <div class="contenedorLogo">
             <div class="contendorLogoComSafe">
                 <img src="img/LogoCOMSAFE03.png" alt="contendorLogoComSafe"> 
@@ -47,12 +52,10 @@
     </div>
 
     <?php 
-        include_once "php/MenuPrincipal.php";
+       include_once "php/MenuPrincipal.php";
     ?>
 
-    
-
-    <main class="cuerpoPrincipalPagina" id="cuerpoPrincipalPagina">
+    <main class="cuerpoPrincipalPagina " id="cuerpoPrincipalPagina" s>
         <?php 
             include_once "php/Carrusel.php";
         ?>
@@ -170,8 +173,13 @@
     </main>
 
     <footer>
-        <h3>@ Todos los derechos reservados para COMSAFE</h3>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 ComSafe. 
+        </div>
+        <!-- Copyright -->
     </footer>
+    
 </body>
 
 <!-- Librerias Bootstrap -->
