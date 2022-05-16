@@ -18,14 +18,12 @@ header span {
   /*background-color: #c94cffc7;*/
   background-color: #173668;
   display: flex;
-  justify-content: center;
 }
 
 .contenedorLogo .contendorLogoComSafe {
   height: 100%;
   width: auto;
   display: flex;
-  justify-content: center;
 }
 .contenedorLogo .contendorLogoComSafe img {
   height: 100%;
@@ -96,7 +94,6 @@ header span {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -114,7 +111,6 @@ header span {
   text-decoration: none;
   height: 100%;
   display: flex;
-  align-items: center;
   padding: 0px 20px;
   font-weight: bolder;
 }
@@ -142,7 +138,6 @@ header span {
 
   .contenedorLogo {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     height: 15vh;
     width: 100%;
@@ -155,7 +150,6 @@ header span {
   .contenedorBotonesMenuResponsive {
     height: 100%;
     display: flex;
-    align-items: center;
   }
 
   .contenedorBotonesMenuResponsive label {
@@ -165,13 +159,11 @@ header span {
   .contenedorBotonesMenuResponsive .botonMenuResponsive01 {
     height: 100%;
     display: flex;
-    align-items: center;
     transition: ease-in 0.75s all;
   }
 
   .contenedorBotonesMenuResponsive .botonMenuResponsive02 {
     height: 100%;
-    align-items: center;
     transition: ease-in 0.75s all;
   }
 

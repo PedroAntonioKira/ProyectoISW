@@ -16,20 +16,25 @@
     <link rel="stylesheet" href="css/Tarjeta.css">
     <link rel="stylesheet" href="css/Footer.css">
 
+    <!--CDNs externos-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
 </head>
 <body >
     <header>
-        <nav class="py-1 bg-light border-bottom">
-            <div class="container d-flex flex-wrap justify-content-end">
-                <ul class="nav">
-                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Iniciar Sesión</a></li>
-                </ul>
+        <nav class="container">
+            <div class="py-1 bg-light border-bottom row">
+                <div class="col">
+                    <img src="./img/LogoVertical.svg" height="60"></img>
+                </div>
+                <div class="d-flex flex-wrap justify-content-end col">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div class="contenedorLogo">
-            <div class="contendorLogoComSafe">
-                <img src="img/LogoCOMSAFE03.png" alt="contendorLogoComSafe"> 
-            </div>
 
             <div class="contenedorBotonesMenuResponsive">
                 <input type="checkbox" id="check" class="checkResponsive">
