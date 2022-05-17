@@ -21,36 +21,22 @@
 
 </head>
 <body >
-    <header>
-        <nav class="container">
-            <div class="py-1 bg-light border-bottom row">
+    <header class="">
+        <nav class="container " >
+            <div class="py-1 bg-light border-bottom row align-items-center ">
                 <div class="col">
                     <img src="./img/LogoVertical.svg" height="60"></img>
                 </div>
                 <div class="d-flex flex-wrap justify-content-end col">
                     <ul class="nav">
-                        <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></a></li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-dark px-2">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="contenedorLogo">
-
-            <div class="contenedorBotonesMenuResponsive">
-                <input type="checkbox" id="check" class="checkResponsive">
-                <label for="check" class="checkBoton">
-                
-                    <span class="botonMenuResponsive01" id="botonMenuResponsive01"> 
-                        <img src="icon/package.png" alt="">
-                    </span>
-                    <span class="botonMenuResponsive02" id="botonMenuResponsive02"> 
-                        <img src="icon/clearance.png" alt="">
-                    </span>
-                
-                </label>
-            </div>
-            
-        </div>
+        
     </header>
     <div class="AjusteMenu" id="AjusteMenu">
 

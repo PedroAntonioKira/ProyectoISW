@@ -1,4 +1,4 @@
-<nav class="contenedorMenuPrincipal " id="contenedorMenuPrincipal">
+<nav class="contenedorMenuPrincipal p-2" id="contenedorMenuPrincipal">
         <ul>
             <li><a href=""> Principal </a></li>
             <li><a href=""> Administrador </a></li>
