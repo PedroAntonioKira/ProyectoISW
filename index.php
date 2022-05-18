@@ -10,14 +10,13 @@
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
 
     <!-- Hojas CSS propias -->
-    <link rel="stylesheet" href="css/Cuerpo.css">
-    <link rel="stylesheet" href="css/Cabecera.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/CarruselPrincipal.css">
-    <link rel="stylesheet" href="css/Tarjeta.css">
-    <link rel="stylesheet" href="css/Footer.css">
 
     <!--CDNs externos-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
 </head>
 <body >
@@ -51,116 +50,30 @@
             include_once "php/Carrusel.php";
         ?>
 
-        
-        <a href="#" class="btn btn-primary"> Google</a>
-        
-        <section class="contenedorTarjetas">
-            <div class="card mb-3 tarjeta" style="max-width: 400px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="img/Tarjeta01.png" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Titulo de la Tarjeta</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section class="contenedor seccion p-5">
+            <h2 class="fw-light text-center">Más Sobre Nosotros</h2>
 
-            <div class="card mb-3 tarjeta" style="max-width: 400px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="img/Tarjeta01.png" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Titulo de la Tarjeta</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
+            <div class="d-md-flex justify-content-md-between p-4">
+                <div class="icono">
+                    <img src="img/icono1.svg" alt="Icono Seguridad">
+                    <h3 >Seguridad</h3>
+                    <p>Quasi quibusdam, quos deserunt, recusandae iusto dolorem voluptatibus quaerat veritatis consectetur culpa sit dignissimos maiores iure id, magnam non voluptatum molestiae doloremque.</p>
                 </div>
-            </div>
 
-            <div class="card mb-3 tarjeta" style="max-width: 400px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="img/Tarjeta01.png" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Titulo de la Tarjeta</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
+                <div class="icono">
+                    <img src="img/icono2.svg" alt="Icono Mejor Precio">
+                    <h3>El Mejor Precio</h3>
+                    <p>Quasi quibusdam, quos deserunt, recusandae iusto dolorem voluptatibus quaerat veritatis consectetur culpa sit dignissimos maiores iure id, magnam non voluptatum molestiae doloremque.</p>
                 </div>
-            </div>
 
-            <div class="card mb-3 tarjeta" style="max-width: 400px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="img/Tarjeta01.png" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Titulo de la Tarjeta</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card mb-3 tarjeta" style="max-width: 400px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="img/Tarjeta01.png" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Titulo de la Tarjeta</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card mb-3 tarjeta" style="max-width: 400px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="img/Tarjeta01.png" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Titulo de la Tarjeta</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card mb-3 tarjeta02" style="max-width: 400px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="img/CarruselPrincipal02.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Titulo de la Tarjeta</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
+                <div class="icono">
+                    <img src="img/icono3.svg" alt="Icono a Tiempo">
+                    <h3>A Tiempo</h3>
+                    <p>Quasi quibusdam, quos deserunt, recusandae iusto dolorem voluptatibus quaerat veritatis consectetur culpa sit dignissimos maiores iure id, magnam non voluptatum molestiae doloremque.</p>
                 </div>
             </div>
         </section>
-        
+
     </main>
 
     <footer>
