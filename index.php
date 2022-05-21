@@ -29,7 +29,7 @@
                 <div class="d-flex flex-wrap justify-content-end col">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link link-dark px-2">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></a>
+                            <a href="ISADMIN.php" class="nav-link link-dark px-2">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></a>
                         </li>
                     </ul>
                 </div>
