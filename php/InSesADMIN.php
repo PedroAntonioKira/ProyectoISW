@@ -9,9 +9,9 @@
         $resultado = mysqli_query($con, $consulta);
         $rows = mysqli_num_rows($resultado);
         if($rows >= 1){
-            header ("Location: ./../inicioADMIN.html");
-            echo '<script language="javascript">alert("CORREO O CONTRASEÑA VALIDOS");</script>';
             
+            echo '<script language="javascript">alert("CORREO O CONTRASEÑA VALIDOS");</script>';
+            header ("refresh: 1; url= ./../inicioADMIN.html"); 
         }else{
             mysqli_free_result($resultado);
             mysqli_close($con);
