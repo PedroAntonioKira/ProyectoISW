@@ -1,0 +1,25 @@
+.fondo-azul{
+    background-color: #F0F5FF;
+    border-radius: 1rem;
+}
+
+.fondo-azul-fuerte{
+    background-color: #B8CFFF;
+    border-radius: 2rem;
+}
+
+.img-card img{
+    height: 100px!important;
+    width: auto!important;
+    background-size: cover;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    
+}
+
+@media (min-width: 768px) {
+    .div-auxiliar{
+        height: 50px;
+    }
+}
+
