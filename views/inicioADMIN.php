@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Administrador</title>
     
     <!-- Librerias Bootstrap -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
 
     <!-- Hojas CSS propias -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleAdmin.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleAdmin.css">
 
     <!--CDNs externos-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
         <nav class="container pb-2" >
             <div class="py-1 bg-light border-bottom row align-items-center ">
                 <div class="col">
-                    <img src="./img/LogoVertical.svg" height="50"></img>
+                    <img src="../img/LogoVertical.svg" height="50"></img>
                 </div>
                 <div class="d-flex flex-wrap justify-content-end col">
                     <ul class="nav">
@@ -42,7 +42,7 @@
 
         </div>
         <?php 
-        include_once "php/MenuAdmin.php";
+        include_once "../php/MenuAdmin.php";
         ?>
     </header>
     
@@ -60,7 +60,7 @@
                             <div class="card-body">
                                 <div class="d-md-flex flex-md-row mb-3 align-items-center ">
                                     <div class="p-2 img-card">
-                                        <img src="img/com.jpg" alt="comunidad">
+                                        <img src="../img/com.jpg" alt="comunidad">
                                     </div>
                                     <div class="p-2">
                                         <h5 class="card-title">Inquilinos</h5>
@@ -77,7 +77,7 @@
                             <div class="card-body">
                                 <div class="d-md-flex flex-md-row mb-3 align-items-center ">
                                     <div class="p-2 img-card">
-                                        <img src="img/inmuebles.png" alt="inmueble">
+                                        <img src="../img/inmuebles.png" alt="inmueble">
                                     </div>
                                     <div class="p-2">
                                         <h5 class="card-title">Inmuebles</h5>
@@ -96,7 +96,7 @@
                                 <div class="card-body">
                                     <div class="d-md-flex flex-md-row mb-3 align-items-center ">
                                         <div class="p-2 img-card">
-                                            <img src="img/edificios.jpg" alt="edificio">
+                                            <img src="../img/edificios.jpg" alt="edificio">
                                         </div>
                                         <div class="p-2">
                                             <h5 class="card-title">Edificios</h5>
@@ -113,7 +113,7 @@
                                 <div class="card-body">
                                     <div class="d-md-flex flex-md-row mb-3 align-items-center ">
                                         <div class="p-2 img-card">
-                                            <img src="img/areac.jpg" alt="area comun">
+                                            <img src="../img/areac.jpg" alt="area comun">
                                         </div>
                                         <div class="p-2">
                                             <h5 class="card-title">Áreas comunes</h5>
@@ -132,7 +132,7 @@
                         <div class="card-body">
                             <div class="d-md-flex flex-md-row mb-3 align-items-center ">
                                 <div class="p-2 img-card">
-                                    <img src="img/visitas.png" alt="visitas">
+                                    <img src="../img/visitas.png" alt="visitas">
                                 </div>
                                 <div class="p-2">
                                     <h5 class="card-title">Visitas</h5>
@@ -148,7 +148,7 @@
                             <div class="card-body">
                                 <div class="d-md-flex flex-md-row mb-3 align-items-center ">
                                     <div class="p-2 img-card">
-                                        <img src="img/consulta.png" alt="consulta">
+                                        <img src="../img/consulta.png" alt="consulta">
                                     </div>
                                     <div class="p-2">
                                         <h5 class="card-title">Consultass</h5>
