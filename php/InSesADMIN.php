@@ -6,7 +6,7 @@
 
     if($con){
         $consulta = "SELECT * FROM ADMINISTRADOR WHERE CORREO= '$correo' AND CONTRASEÑA = '$contra'";
-        $resultado = mysqli_query($con, $consulta);
+        $resultado = mysqli_query($conn, $consulta);
         $rows = mysqli_num_rows($resultado);
         if($rows >= 1){
             
@@ -14,7 +14,7 @@
             header ("refresh: 1; url= ./../inicioADMIN.html"); 
         }else{
             mysqli_free_result($resultado);
-            mysqli_close($con);
+            mysqli_close($conn);
             //echo "REchazado :(";
             echo '<script language="javascript">alert("CORREO O CONTRASEÑA INCORRECTOS");</script>';
             header ("Location: PROYECTOISW/ISADMIN.php");
