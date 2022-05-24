@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador</title>
+    <title>Registro Inquilino</title>
     
     <!-- Librerias Bootstrap -->
     <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
@@ -70,16 +70,6 @@
                             <span class="errorC" aria-live="polite"></span>
                         </div>
                         <!-- form-group end.// -->
-                        <div class="col-md-3 form-group">
-                            <label>Sexo*</label>
-                            <select class="form-select " style="font-size: 1.5rem;" name="Sexo" id="S">
-                                <option selected>Seleccionar...</option>
-                                <option value="1">Mujer</option>
-                                <option value="2">Hombre</option>
-                                <option value="3">Otro</option>
-                            </select>
-                        </div>
-                        <!-- form-group end.// -->
                     </div>
 
                     <div class="row g-3 px-5 py-2">
@@ -93,9 +83,8 @@
                             <label>Tipo de inquilino*</label>
                             <select class="form-select form-control" style="font-size: 1.5rem;" name="TInqui" id="TI">
                                 <option selected>Seleccionar...</option>
-                                <option value="1">Mujer</option>
-                                <option value="2">Hombre</option>
-                                <option value="3">Otro</option>
+                                <option value="1">Dueño</option>
+                                <option value="2">Familiar</option>
                             </select>
                             
                         </div>
