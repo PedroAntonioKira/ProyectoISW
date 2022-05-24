@@ -176,6 +176,6 @@
 </body>
 
 <!-- Librerias Bootstrap -->
-<script src="lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js" ></script>
 
 </html>
