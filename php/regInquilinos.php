@@ -8,13 +8,12 @@
     $numcontrato = trim($_POST['NumCont']);
     $curp = trim($_POST['Curp']);
     $tipo = trim($_POST['TInqui']);
-    $sexo = trim($_POST['Sexo']);
     $correo = trim($_POST['Correo_Electronico']);
 
     $fn = fecha($curp);
-
+    $g = genero($curp);
     if($conn){
-        $consulta = "INSERT INTO INQUILINO VALUES('$nombre', '$app', '$apm', '$numcontrato', 'ssssssssss', '$fn', '$curp', '$tipo', '$sexo', '$correo');";
+        $consulta = "INSERT INTO INQUILINO VALUES('$nombre', '$app', '$apm', '$numcontrato', 'ssssssssss', '$fn', '$curp', '$tipo', '$g', '$correo');";
         $resultado = mysqli_query($conn, $consulta);
 
         if($resultado){

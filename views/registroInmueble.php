@@ -31,7 +31,7 @@
                     </div>
                 </header>
                 
-                <form action="../php/regInquilinos.php" name="Inicioses2" method="post">
+                <form action="../php/regInmueble.php" name="Inicioses2" method="post">
                     
                     <!-- Info general -->
                     <div class="row g-3 px-5 ">
@@ -79,19 +79,19 @@
                         <p class="fw-bold fs-3 m-0">Dimensiones</p>
                         <div class="col-md-4 form-group mt-0">
                             <label>Ancho*</label>
-                            <input required type="text" class="form-control" name="NumPisos" id="NP" autofocus style="font-size: 1.3rem;">
+                            <input required type="text" class="form-control" name="Ancho" id="NP" autofocus style="font-size: 1.3rem;">
                             <span class="errorN" aria-live="polite"></span>
                         </div>
                         <!-- form-group end.// -->
                         <div class="col-md-4 form-group mt-0">
                             <label>Alto*</label>
-                            <input required type="text" class="form-control" name="NumBaños" id="NB" style="font-size: 1.3rem;">
+                            <input required type="text" class="form-control" name="Alto" id="NB" style="font-size: 1.3rem;">
                             <span class="errorAP" aria-live="polite"></span>
                         </div>
                         <!-- form-group end.// -->
                         <div class="col-md-4 form-group mt-0">
                             <label>Profundo*</label>
-                            <input required type="text" class="form-control" name="NumCuartos" id="NC" style="font-size: 1.3rem;">
+                            <input required type="text" class="form-control" name="Profundo" id="NC" style="font-size: 1.3rem;">
                             <span class="errorAM" aria-live="polite"></span>
                         </div>
                         <!-- form-group end.// -->

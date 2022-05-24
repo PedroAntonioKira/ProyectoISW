@@ -31,7 +31,7 @@
                     </div>
                 </header>
                 
-                <form action="../php/regInquilinos.php" name="Inicioses2" method="post">
+                <form action="../php/registroAco.php" name="Inicioses2" method="post">
                     
                     <!-- Info general -->
                     <div class="row g-3 px-5 ">

@@ -14,5 +14,17 @@
     $fnacimiento = $anio.'-'.$mnacimiento.'-'.$dnacimiento;
 
     return $fnacimiento;
-  }  
+  } 
+  
+  function genero($str){
+    $g = substr($str, -8, 1);
+    $genero = "";
+    if($g == "H"){
+      $genero = "HOMBRE";
+    }else if($g == "M"){
+      $genero == "MUJER";
+    }
+
+    return $genero;
+  }
 ?>
