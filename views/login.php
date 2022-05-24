@@ -25,7 +25,7 @@
             <div class="d-flex justify-content-center"><img src="../img/icono.svg" width="160" height="120" alt=""></div>
             <div class="d-flex justify-content-center"><h4 class="card-title mb-4">Iniciar Sesión</h4></div>
                         
-            <form action="php/InSesADMIN.php" name="Inicioses2" method="post">
+            <form action="../../php/InSesADMIN.php" name="Inicioses2" method="post">
                 <div class="form-group p-3">
                     <label>Correo electrónico</label>
                     <input name="correo" class="form-control" placeholder="ex. name@gmail.com" type="email" style="font-size: 1.5rem;">
