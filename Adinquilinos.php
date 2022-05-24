@@ -45,11 +45,11 @@
         </div>
         <div class="div2"> 
             <?php
-                $consulta = "SELECT * FROM INQUILINO; ";
+                $consulta = "SELECT * FROM inquilino; ";
                 include("php/conexionbd.php");
 
-                if($con){
-                    $resultado = mysqli_query($con, $consulta);
+                if($conn){
+                    $resultado = mysqli_query($conn, $consulta);
                 }
                 ?>
                      <table class="table table-striped">

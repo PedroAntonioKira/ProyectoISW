@@ -5,14 +5,14 @@
 
     if(isset($_POST['eliminar'])){
         $consulta = "Delete From INMUEBLE WHERE ID= '$id';";
-        $resultado = mysqli_query($con, $consulta);
+        $resultado = mysqli_query($conn, $consulta);
         
         if($resultado){
             header ("refresh: 1; url= ./../Inmuebles.php");
             echo '<script language="javascript">alert("Inquilino Eliminado");</script>';
         }else{
             mysqli_free_result($resultado);
-            mysqli_close($con);
+            mysqli_close($conn);
             //echo "REchazado :(";
             echo '<script language="javascript">alert("Ha ocurriod un error");</script>';
             header ("refresh: 1; url= ./../Inmuebles.php");
@@ -26,23 +26,18 @@
         /*$consulta = "UPDATE INMUEBLE SET DIMENSIONES = '$dim', N°_CUARTOS = '$cuartos' , N°_BAÑOS = '$banios', PRECIO = '$precio' WHERE ID= '$id';";
         */
         $consulta = "UPDATE INMUEBLE SET DIMENSIONES = '$dim', N°_CUARTOS = '$cuartos', N°_BAÑOS = '$banios' WHERE ID= '$id';"; 
-        $resultado = mysqli_query($con, $consulta);
+        $resultado = mysqli_query($conn, $consulta);
         
         if($resultado){
             header ("refresh: 1; url= ./../Inmuebles.php");
             echo '<script language="javascript">alert("Datos Actualizados");</script>';
         }else{
             mysqli_free_result($resultado);
-            mysqli_close($con);
+            mysqli_close($conn);
             //echo "REchazado :(";
             echo '<script language="javascript">alert("Ha ocurriod un error");</script>';
             header ("refresh: 1; url= ./../Inmuebles.php");
         }
-        
-    }
-    
-    if($con){
-        
         
     }
 ?>

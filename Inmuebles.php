@@ -48,8 +48,8 @@
                 $consulta = "SELECT * FROM INMUEBLE; ";
                 include("php/conexionbd.php");
 
-                if($con){
-                    $resultado = mysqli_query($con, $consulta);
+                if($conn){
+                    $resultado = mysqli_query($conn, $consulta);
                 }
                 ?>
                      <table class="table table-striped">
