@@ -69,7 +69,7 @@
                                     </div>
                                 </div>
                                 <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>
-                                <a href="../views/consultas/Adinquilinos.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
+                                <a href="../views/consultas_Admin/Adinquilinos.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                                 
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                                     </div>
                                 </div>
                                 <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>
-                                <a href="consultas/Inmuebles.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
+                                <a href="consultas_Admin/Inmuebles.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                                 
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                                         </div>
                                     </div>
                                     <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>
-                                    <a href="registros/registroAC.php" class="btn btn btn-outline-prima btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
+                                    <a href="consultas_Admin/areaComunC.php" class="btn btn btn-outline-prima btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                                     
                                 </div>
                             </div>
@@ -153,7 +153,7 @@
                                         <img src="../img/consulta.png" alt="consulta">
                                     </div>
                                     <div class="p-2">
-                                        <h5 class="card-title">Consultass</h5>
+                                        <h5 class="card-title">Reportes</h5>
                                     </div>
                                 </div>
                                 <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>

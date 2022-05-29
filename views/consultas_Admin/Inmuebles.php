@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista Inmuebles</title>
+    <title>Inmuebles</title>
     
     <!-- Librerias Bootstrap -->
     <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
 
     <!-- Hojas CSS propias -->
-    <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/styleConsultas.css">
 
@@ -48,7 +47,7 @@
     <div class="fondo-azul p-5">
         <div class="contenedor fondo-blanco m-auto">
             <h1 class="pt-5 px-5">Inmuebles</h1>
-            <div class="parent px-5 pb-5">
+            <div class="parent px-5 ">
                 <div class="div2"> 
                     <?php
                         $consulta = "SELECT * FROM INMUEBLE; ";
@@ -128,7 +127,7 @@
             </div>
 
             <div class="contenedor pb-5 d-flex justify-content-end">
-                <a type="submit" href="../registros/registroInmueble.php" class="btn btn-outline-dark" style="font-size: 1.5rem;">Registrar Nuevo Inmueble</a>
+                <a type="submit" href="../registros/registroInmueble.php" class="btn btn-outline-dark" style="font-size: 1.5rem;">Agregar Nuevo Inmueble</a>
             </div>
         </div>
     </div>

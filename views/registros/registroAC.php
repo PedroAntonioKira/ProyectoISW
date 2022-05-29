@@ -36,11 +36,20 @@
                     <!-- Info general -->
                     <div class="row g-3 px-5 pt-3">
                         <p class="fw-bold fs-3 m-0">Información general</p>
-                        <div class="col-md-4 form-group mt-0">
+                        <div class="col form-group mt-0">
                             <label>Nombre*</label>
                             <input required type="text" class="form-control" name="NombreAC" id="NAC" autofocus style="font-size: 1.3rem;">
                             <span class="errorNAC" aria-live="polite"></span>
                         </div>
+                        <!-- form-group end.// -->
+                        <div class="col-md-4 form-group mt-0">
+                            <label>Cantidad de personas*</label>
+                            <input required type="text" class="form-control" name="Personas" id="CP" style="font-size: 1.3rem;" >
+                            <span class="errorCP" aria-live="polite"></span>
+                        </div>
+                        <!-- form-group end.// -->
+                    </div>
+                    <div class="row g-3 px-5 pt-4">
                         <!-- form-group end.// -->
                         <div class="col form-group mt-0">
                             <label>Objetivo*</label>
@@ -48,11 +57,11 @@
                             <span class="errorO" aria-live="polite"></span>
                         </div>
                         <!-- form-group end.// -->
-                        <!-- form-group end.// -->
                     </div>
 
+
                     <!--Info interna-->
-                    <div class="row g-3 px-5 pt-5">
+                    <div class="row g-3 px-5 pt-4">
                         <div class="col form-group mt-0">
                             <label for="D">Descripción</label>
                             <textarea required type="text" class="form-control" name="Descripcion" id="D" autofocus style="font-size: 1.3rem; height: 100px"></textarea>
@@ -60,7 +69,8 @@
                         </div>
                     </div>
 
-                    <div class="form-group d-flex justify-content-end p-5">
+                    <div class="form-group d-flex justify-content-between p-5">
+                        <a type="submit" href="../consultas_Admin/areaComunC.php" class="btn btn-outline-primary" name="btnC" id="btnC" value="Cancelar" style="font-size: 1.5rem;">Cancelar</a>
                         <input type="submit" class="btn btn-outline-primary" name="btnR" id="btn" value="Registrar" style="font-size: 1.5rem;">
                     </div>
                     <!-- form-group// -->

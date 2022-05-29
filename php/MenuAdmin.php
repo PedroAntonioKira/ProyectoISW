@@ -7,7 +7,7 @@
             <li class="nav-item"><a href=""> Edificios</a></li>
             <li class="nav-item"><a href=""> Áreas comúnes</a></li>
             <li class="nav-item"><a href=""> Visitas </a></li>
-            <li class="nav-item"><a href=""> Consultas </a></li>
+            <li class="nav-item"><a href=""> Reportes </a></li>
         </ul>
     </div>
 </nav>
