@@ -121,7 +121,7 @@
                                         </div>
                                     </div>
                                     <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>
-                                    <a href="registroAC.php" class="btn btn btn-outline-prima btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
+                                    <a href="areasComunes.php" class="btn btn btn-outline-prima btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                                     
                                 </div>
                             </div>
