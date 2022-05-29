@@ -7,11 +7,11 @@
     <title>Registro Inquilino</title>
     
     <!-- Librerias Bootstrap -->
-    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
 
     <!-- Hojas CSS propias -->
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
     <!--CDNs externos-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -24,14 +24,14 @@
             <article class="card-body">
                 <header class="mb-2 pb-5">
                     <div class="d-flex justify-content-center p-1">
-                        <a href=""><img src="../img/icono.svg" width="140" height="100" alt=""></a>
+                        <a href=""><img src="../../img/icono.svg" width="140" height="100" alt=""></a>
                     </div>
                     <div class="d-flex justify-content-center ">
                         <h4 class="card-title mb-4">Registro Nuevo Inquilino</h4>
                     </div>
                 </header>
                 
-                <form action="../php/regInquilinos.php" name="Inicioses2" method="post">
+                <form action="../../php/regInquilinos.php" name="Inicioses2" method="post">
                     <!--Nombre completo-->
                     <div class="row g-3 px-5 ">
                         <div class="col-md-4 form-group ">
@@ -81,10 +81,10 @@
                         <!-- form-group end.// -->
                         <div class="col-md-3 form-group">
                             <label>Tipo de inquilino*</label>
-                            <select class="form-select form-control" style="font-size: 1.5rem;" name="TInqui" id="TI">
-                                <option selected>Seleccionar...</option>
-                                <option value="Dueño">Dueño</option>
-                                <option value="Familiar">Familiar</option>
+                            <select class="form-select form-control" style="font-size: 1.5rem;" name="TInqui" id="TI" required>
+                                <option selected disabled>Seleccionar...</option>
+                                <option value="1">Dueño</option>
+                                <option value="2">Familiar</option>
                             </select>
                             
                         </div>
@@ -92,11 +92,11 @@
                     </div>
 
                     <div class="form-group d-flex justify-content-end p-5">
-                        <input type="submit" class="btn btn-outline-dark" name="btnR" id="btn" value="Registrarse" style="font-size: 1.5rem;">
+                        <input type="submit" class="btn btn-outline-dark" name="btnR" id="btn" value="Registrar" style="font-size: 1.5rem;">
                     </div>
                     <!-- form-group// -->
                 </form>
-                <script src="../js/validation.js"></script>
+                <script src="../../js/validaciones/validation.js"></script>
             </article>
             <!-- card-body end .// -->
             <div class="card-footer text-center text-muted">© 2022 ComSafe. </div>
@@ -106,6 +106,6 @@
 </body>
 
 <!-- Librerias Bootstrap -->
-<script src="../lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="../../lib/bootstrap/js/bootstrap.min.js" ></script>
 
 </html>

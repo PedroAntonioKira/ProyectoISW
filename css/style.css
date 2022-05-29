@@ -11,6 +11,9 @@ html{
 body {
   font-size: 1.6rem;
   line-height: 1.5;
+  position: relative;
+  padding-bottom: 3em;
+  min-height: 100vh;
 }
 
 main{
@@ -338,7 +341,9 @@ header {
 footer {
     background-color: #6D6D6D;
     color: #ffffff;
-   
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 
