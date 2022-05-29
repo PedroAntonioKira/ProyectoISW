@@ -1,11 +1,13 @@
-<nav class="contenedorMenuPrincipal p-2" id="contenedorMenuPrincipal">
-        <ul>
-            <li><a href=""> Inicio </a></li>
-            <li><a href=""> Inquilinos </a></li>
-            <li><a href=""> Inmuebles </a></li>
-            <li><a href=""> Edificios</a></li>
-            <li><a href=""> Áreas comúnes</a></li>
-            <li><a href=""> Visitas </a></li>
-            <li><a href=""> Consultas </a></li>
+<nav class="navbar navbar-expand-sm navbar-light contenedorMenuPrincipal p-2 " id="contenedorMenuPrincipal">
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href=""> Inicio </a></li>
+            <li class="nav-item"><a href=""> Inquilinos </a></li>
+            <li class="nav-item"><a href=""> Inmuebles </a></li>
+            <li class="nav-item"><a href=""> Edificios</a></li>
+            <li class="nav-item"><a href=""> Áreas comúnes</a></li>
+            <li class="nav-item"><a href=""> Visitas </a></li>
+            <li class="nav-item"><a href=""> Consultas </a></li>
         </ul>
+    </div>
 </nav>

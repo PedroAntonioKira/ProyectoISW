@@ -31,17 +31,18 @@
                 <div class="d-flex flex-wrap justify-content-end col">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a href="ISADMIN.php" class="nav-link link-dark px-2">BINEVENIDO: <?php session_name("usuario");
-                            session_start();echo $_SESSION["Nombre"]?> <i class="fas fa-sign-in-alt"></i></a>
+                            <a href="ISADMIN.php" class="nav-link link-dark px-2">Bienvenido, 
+                                <?php session_name("usuario");
+                                      session_start();
+                                      echo ucfirst($_SESSION["Nombre"])?> 
+                            <i class="fas fa-sign-in-alt"></i></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
         
-        <div class="AjusteMenu" id="AjusteMenu">
-
-        </div>
+        
         <?php 
         include_once "../php/MenuAdmin.php";
         ?>
@@ -68,7 +69,7 @@
                                     </div>
                                 </div>
                                 <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>
-                                <a href="../views/registroInquilino.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
+                                <a href="../views/consultas/Adinquilinos.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                                 
                             </div>
                         </div>
@@ -85,7 +86,7 @@
                                     </div>
                                 </div>
                                 <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>
-                                <a href="Inmuebles.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
+                                <a href="consultas/Inmuebles.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                                 
                             </div>
                         </div>
@@ -121,7 +122,7 @@
                                         </div>
                                     </div>
                                     <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>
-                                    <a href="registroAC.php" class="btn btn btn-outline-prima btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
+                                    <a href="registros/registroAC.php" class="btn btn btn-outline-prima btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                                     
                                 </div>
                             </div>

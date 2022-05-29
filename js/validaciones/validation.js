@@ -161,6 +161,7 @@ function showErrorC() {
 const nc = document.getElementById('NC');
 const ncError = document.querySelector('#NC + span.errorNC');
 
+var regexNC = /^[0-9]+$/;
 
 nc.addEventListener('input', function(event) {
     var test = showErrorNC();
@@ -182,6 +183,11 @@ nc.addEventListener('input', function(event) {
 function showErrorNC() {
     if (nc.value.length === 0) {
         ncError.textContent = 'Ingresa el número de contrato';
+        ncError.className = 'error active';
+        return true;
+    }
+    if (!regexNC.test(nc.value)) {
+        ncError.textContent = 'Número de contrato no válido';
         ncError.className = 'error active';
         return true;
     }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador</title>
+    <title>Iniciar Sesión</title>
     
     <!-- Librerias Bootstrap -->
     <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
@@ -25,7 +25,7 @@
             <div class="d-flex justify-content-center"><img src="../img/icono.svg" width="160" height="120" alt=""></div>
             <div class="d-flex justify-content-center"><h4 class="card-title mb-4">Iniciar Sesión</h4></div>
                         
-            <form action="../../php/InSesADMIN.php" name="Inicioses2" method="post">
+            <form action="./../php/InSesADMIN.php" name="Inicioses2" method="post">
                 <div class="form-group p-3">
                     <label>Correo electrónico</label>
                     <input name="correo" class="form-control" placeholder="ex. name@gmail.com" type="email" style="font-size: 1.5rem;">
@@ -43,9 +43,11 @@
                 </div> <!-- form-group// -->    
             </form>
             </div> <!-- card-body.// -->
-            <div class="card-footer text-center">¿No tienes una cuenta? <a href="">Registrate</a></div>
+            <div class="card-footer text-center">
+                <div class="d-flex justify-content-center"><p class="mt-4 mb-3 text-muted">© 2022 ComSafe</p></div>
+            </div>
         </div>
-        <div class="d-flex justify-content-center"><p class="mt-4 mb-3 text-muted">© 2022 ComSafe</p></div>
+        
         </div>
         
     </body>
