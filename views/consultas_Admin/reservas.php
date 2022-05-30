@@ -49,7 +49,8 @@
             <div class="parent px-5 ">
                 <div class="div2"> 
                     <?php
-                        $consulta = "SELECT * FROM reservar; ";
+                        $consulta = "SELECT r.FECHA, a.NOMBRE AS NOMBREA, a.ID, i.NOMBRE, i.AP_PATERNO, i.AP_MATERNO, i.TIPO, i.CURP FROM reservar r, area_comun a, inquilino i 
+                        WHERE r.NUMCONTRATO = i.NUMCONTRATO AND r.CURP = i.CURP AND a.ID = r.ID;  ";
                         include("../../php/conexionbd.php");
 
                         if($conn){
@@ -59,10 +60,10 @@
                             <table class="table table-striped table-hover ">
                                 <thead class="table-light">
                                     <tr>
-                                        <th scope="col">ID Reserva</th>
+                                        <th scope="col">Fecha de Reserva</th>
                                         <th scope="col">Creador</th>
                                         <th scope="col">CURP</th>
-                                        <th scope="col">Sexo</th>
+                                        <th scope="col">Nombre de área</th>
                                         <th scope="col">Tipo de iquilino</th>
                                         <th scope="col"></th>
                                     </tr>
@@ -71,27 +72,27 @@
                         <?php
 
                         while($fila = $resultado->fetch_object()){
-                            $numcontrato = $fila -> NUMCONTRATO;
+                            $curp = $fila -> CURP;
                             $nombre = ($fila->NOMBRE) . ' '.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
-                            $curp =$fila -> CURP;
-                            $sexo = $fila-> SEXO;
+                            $fecha =$fila -> FECHA;
+                            $sexo = $fila-> NOMBREA;
                             $tipo = $fila -> TIPO;
                             echo "
                             <form action='../php/eliminarInquilino.php' method = 'POST'>
                                 <tr>
                                     <td style='width: 12%' class='align-middle'>
-                                        <input  id='floatingPassword' class='form-control-plaintext'  name='numcontrato' value='$numcontrato'>
+                                        <input  id='floatingPassword' class='form-control-plaintext'  name='numcontrato' value='$fecha'>
                                     </td>
-                                    <td style='width: 35%' class='align-middle'>
+                                    <td style='width: 25%' class='align-middle'>
                                         <input  id='floatingPassword' name='nombre' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$nombre'>
                                     </td>
                                     <td class='align-middle'>
                                         <input  id='floatingPassword' name='curp' class='form-control-plaintext' value='$curp'>
                                     </td>
-                                    <td style='width: 10%' class='align-middle'>
+                                    <td style='width: 25%' class='align-middle'>
                                         <input  class='form-control' name='sexo'  style='font-size: 1.4rem;' value='$sexo'>
                                     </td>
-                                    <td style='width: 15% ' class='align-middle'>
+                                    <td style='width: 10% ' class='align-middle'>
                                         <input  class='form-control'  style='font-size: 1.4rem;' name='tipo' value='$tipo'>
                                     </td>
                                     <td>

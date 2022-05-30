@@ -82,13 +82,13 @@
                                         <input  id='floatingPassword' class='form-control-plaintext' name='id' value='$ided'>
                                     </td>
                                     <td style='width: 20%' class='align-middle'>
-                                        <input  id='floatingPassword' name='dim' class='form-control' style='font-size: 1.4rem; width: 100%' value='$nombre'>
+                                        <input  id='floatingPassword' name='nombre' class='form-control' style='font-size: 1.4rem; width: 100%' value='$nombre'>
                                     </td>
                                     <td style='width: 20%' >
-                                        <input  id='floatingPassword' name='pisos' class='form-control-plaintext' value='$objetivo'>
+                                        <input  id='floatingPassword' name='objetivo' class='form-control' value='$objetivo'>
                                     </td>
                                     <td style='width: 40%; ' class='text-wrap'>
-                                        <input  id='floatingPassword' name='cuartos' class='form-control-plaintext' value='$des'>
+                                        <textarea  id='floatingPassword' name='desc' class='form-control' value='$des'> $des</textarea>
                                     </td>
                                     <td>
                                         <button type='submit' class='btn btn-light' name='cambiar'>

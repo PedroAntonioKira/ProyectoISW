@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista Visitantes</title>
+    <title>Inmuebles</title>
     
     <!-- Librerias Bootstrap -->
     <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
 
     <!-- Hojas CSS propias -->
-    <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/styleConsultas.css">
 
     <!--CDNs externos-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
 </head>
 <body >
+    
     <header class="fondo-blanco">
         <nav class="container pb-2 " >
             <div class="py-1 bg-light border-bottom row align-items-center ">
@@ -45,60 +46,40 @@
 
     <div class="fondo-azul p-5">
         <div class="contenedor fondo-blanco m-auto">
-            <h1 class="pt-5 px-5">Visitas</h1>
+            <h1 class="pt-5 px-5">Inmuebles</h1>
             <div class="parent px-5 ">
                 <div class="div2"> 
-                    <form method="post">
-                    <input type="date" name="fecha">
-                    <input type="submit" value="BUSCAR">
-                    </form>
                     <?php
-                        $date = trim($_POST['fecha']);
-                        $consulta = "SELECT * FROM visitante WHERE FECHA = '$date'; ";
+                        $consulta = "SELECT * FROM SECCION; ";
                         include("../../php/conexionbd.php");
-                        
+
                         if($conn){
                             $resultado = mysqli_query($conn, $consulta);
                         }
                         ?>
-                            <table class="table table-striped table-hover ">
+                            <table class="table table-striped table-hover">
                                 <thead class="table-light">
                                     <tr>
-                                        <th scope="col">ID_Visita</th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">CURP</th>
-                                        <th scope="col">Medio de Llegada</th>
-                                        <th scope="col">MFecha</th>
+                                        <th scope="col">ID SECCIÓN</td>
+                                        <th scope="col">NOMBRE DE SECCIÓN</td>
                                     </tr>
                                 </thead>
                             <tbody class="table-group-divider">
                         <?php
 
                         while($fila = $resultado->fetch_object()){
-                            $idv = $fila -> ID_VISITA;
-                            $nombre = ($fila->NOMBRES) . ' '.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
-                            $curp =$fila -> CURP;
-                            $mdllegada = $fila-> MDELLEGADA;
-                            $placas = $fila -> PLACAS;
-                            $fec = $fila -> FECHA;
+                            $ided = $fila -> ID;
+                            $secc= $fila->NOMBRE;
                             echo "
-                            <form action='../php/eliminarInquilino.php' method = 'POST'>
+                            <form action='../../php/ecInmueble.php' method = 'POST'>
                                 <tr>
-                                    <td style='width: 12%' class='align-middle'>
-                                        <input  id='floatingPassword' class='form-control-plaintext'  name='idv' value='$idv'>
+                                    <td style='width: 10%' >
+                                        <input  id='floatingPassword' class='form-control-plaintext' name='id' value='$ided'>
                                     </td>
                                     <td style='width: 25%' class='align-middle'>
-                                        <input  id='floatingPassword' name='nombre' class='form-control-plaintext' style='width=100%; font-size: 1.4rem;' value='$nombre'>
+                                        <input  id='floatingPassword' name='dim' class='form-control' style='font-size: 1.4rem; width: 100%' value='$secc'>
                                     </td>
-                                    <td class='align-middle'>
-                                        <input  id='floatingPassword' name='curp' class='form-control-plaintext' value='$curp'>
-                                    </td>
-                                    <td style='width: 20%' class='align-middle'>
-                                        <input  class='form-control-plaintext' name='mllegada'  style='font-size: 1.4rem;' value='$mdllegada'>
-                                    </td>
-                                    <td style='width: 10%' class='align-middle'>
-                                        <input  class='form-control-plaintext' name='fecha'  style='font-size: 1.4rem;' value='$fec'>
-                                    </td>
+                                    
                                     <td>
                                         <button type='submit' class='btn btn-light' name='cambiar'>
                                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
@@ -114,7 +95,6 @@
                                 </tr>
                             </form>";
                         }
-                    
                     ?>
                         </tbody>
                         </table>
@@ -122,19 +102,19 @@
             </div>
 
             <div class="contenedor pb-5 d-flex justify-content-end">
-                <a type="submit" href="../registros/registroInquilino.php" class="btn btn-outline-dark" style="font-size: 1.5rem;">Agregar Nuevo Inquilino</a>
+                <a type="submit" href="../registros/registro_Edificio.php" class="btn btn-outline-dark" style="font-size: 1.5rem;">Agregar Nueva Sección</a>
             </div>
         </div>
     </div>
 
-    <footer class="footer" id="footer-wrapper">
+
+    <footer class="footer">
     <!-- Copyright -->
         <div class="text-center p-3 fw-bold">
             © 2022 ComSafe. 
         </div>
     <!-- Copyright -->
     </footer>
-
 </body>
 <!-- Librerias Bootstrap -->
 <script src="../../lib/bootstrap/js/bootstrap.min.js" ></script>
