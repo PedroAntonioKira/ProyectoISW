@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
+    <title>Reportes</title>
     
     <!-- Librerias Bootstrap -->
     <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
@@ -45,14 +45,17 @@
 
     <div class="fondo-azul p-5">
         <div class="contenedor fondo-blanco m-auto">
-            <h1 class="pt-5 px-5">Reservas</h1>
+            <h1 class="p-5">Control de reportes</h1>
             <div class="parent px-5 ">
                 <div class="div2"> 
+                    <form method="post">
+                    <input type="date" name="fecha">
+                    <input type="submit" value="BUSCAR">
+                    </form>
                     <?php
-                        $consulta = "SELECT r.FECHA, a.NOMBRE AS NOMBREA, a.ID, i.NOMBRE, i.AP_PATERNO, i.AP_MATERNO, i.TIPO, i.CURP FROM reservar r, area_comun a, inquilino i 
-                        WHERE r.NUMCONTRATO = i.NUMCONTRATO AND r.CURP = i.CURP AND a.ID = r.ID;  ";
+                        $consulta = "select R.ID AS ID_R, R.TIPO AS TIPO_R, DATE_FORMAT(FECHA, '%d/%m/%y') AS FECHA, ESTATUS, DESCRIPCIÓN, I.NOMBRE AS NOMBRE_I, AP_PATERNO, AP_MATERNO from reportes R, inquilino I where R.NUMCONTRATO = I.NUMCONTRATO;";
                         include("../../php/conexionbd.php");
-
+                        
                         if($conn){
                             $resultado = mysqli_query($conn, $consulta);
                         }
@@ -60,11 +63,11 @@
                             <table class="table table-striped table-hover ">
                                 <thead class="table-light">
                                     <tr>
-                                        <th scope="col">Fecha de Reserva</th>
-                                        <th scope="col">Creador</th>
-                                        <th scope="col">CURP</th>
-                                        <th scope="col">Nombre de área</th>
-                                        <th scope="col">Tipo de iquilino</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Tipo</th>
+                                        <th scope="col">Hecho por</th>
+                                        <th scope="col">Descripción</th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -72,29 +75,31 @@
                         <?php
 
                         while($fila = $resultado->fetch_object()){
-                            $curp = $fila -> CURP;
-                            $nombre = ($fila->NOMBRE) . ' '.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
+                            $id_r = $fila -> ID_R;
                             $fecha =$fila -> FECHA;
-                            $sexo = $fila-> NOMBREA;
-                            $tipo = $fila -> TIPO;
+                            $nombre = ($fila->NOMBRE_I) . ' '.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
+                            $tipo = $fila -> TIPO_R;
+                            $des = $fila -> DESCRIPCIÓN;
+                            
                             echo "
-                            <form action='../php/eliminarInquilino.php' method = 'POST'>
+                            <form action='' method = 'POST'>
                                 <tr>
-                                    <td style='width: 12%' class='align-middle'>
-                                        <input  id='floatingPassword' class='form-control-plaintext'  name='numcontrato' value='$fecha'>
+                                    <td style='width: 8%' class='align-middle'>
+                                        <input  id='floatingPassword' class='form-control-plaintext'  name='ID_reporte' value='$id_r'>
                                     </td>
-                                    <td style='width: 25%' class='align-middle'>
+                                    <td style='width: 12%' class='align-middle'>
+                                        <input  id='floatingPassword' name='fecha' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$fecha'>
+                                    </td>
+                                    <td style='width: 13%' class='align-middle'>
+                                        <input  id='floatingPassword' name='tipo' class='form-control-plaintext' value='$tipo'>
+                                    </td>
+                                    <td style='width: 22%' class='align-middle'>
                                         <input  id='floatingPassword' name='nombre' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$nombre'>
                                     </td>
-                                    <td class='align-middle'>
-                                        <input  id='floatingPassword' name='curp' class='form-control-plaintext' value='$curp'>
+                                    <td style='width: 37%' class='align-middle'>
+                                        <input  id='floatingPassword' name='descripcion' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$des'>
                                     </td>
-                                    <td style='width: 25%' class='align-middle'>
-                                        <input  class='form-control' name='sexo'  style='font-size: 1.4rem;' value='$sexo'>
-                                    </td>
-                                    <td style='width: 10% ' class='align-middle'>
-                                        <input  class='form-control'  style='font-size: 1.4rem;' name='tipo' value='$tipo'>
-                                    </td>
+                                   
                                     <td>
                                         <button type='submit' class='btn btn-light' name='cambiar'>
                                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
@@ -115,10 +120,6 @@
                         </tbody>
                         </table>
                 </div>
-            </div>
-
-            <div class="contenedor pb-5 d-flex justify-content-end">
-                <a type="submit" href="../registros/registroInquilino.php" class="btn btn-outline-dark" style="font-size: 1.5rem;">Agregar Nuevo Inquilino</a>
             </div>
         </div>
     </div>
