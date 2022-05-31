@@ -78,17 +78,17 @@
                             echo "
                             <form action='' method = 'POST'>
                                 <tr>
-                                    <td style='width: 10%' >
+                                    <td style='width: 8%'  class='align-middle'>
                                         <input  id='floatingPassword' class='form-control-plaintext' name='id' value='$ided'>
                                     </td>
                                     <td style='width: 20%' class='align-middle'>
                                         <input  id='floatingPassword' name='nombre' class='form-control' style='font-size: 1.4rem; width: 100%' value='$nombre'>
                                     </td>
-                                    <td style='width: 20%' >
-                                        <input  id='floatingPassword' name='objetivo' class='form-control' value='$objetivo'>
+                                    <td style='width: 25%' class='align-middle'>
+                                        <input  id='floatingPassword' name='objetivo' style='font-size: 1.4rem;' class='form-control' value='$objetivo' >
                                     </td>
-                                    <td style='width: 40%; ' class='text-wrap'>
-                                        <textarea  id='floatingPassword' name='desc' class='form-control' value='$des'> $des</textarea>
+                                    <td style='width: 35%; ' class='align-middle'>
+                                        <textarea  id='floatingPassword' name='desc' style='font-size: 1.4rem;' class='form-control' value='$des'> $des</textarea>
                                     </td>
                                     <td>
                                         <button type='submit' class='btn btn-light' name='cambiar'>

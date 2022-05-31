@@ -18,13 +18,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
-
 </head>
 <body>
     
     <header class="">
-        <nav class="container pb-2" >
-            <div class="py-1 bg-light border-bottom row align-items-center ">
+        <div class="container pb-2" >
+            <div class="py-1 border-bottom row align-items-center ">
                 <div class="col">
                     <img src="../img/LogoVertical.svg" height="50"></img>
                 </div>
@@ -41,7 +40,7 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </div>
         
         
         <?php 
@@ -181,5 +180,6 @@
 
 <!-- Librerias Bootstrap -->
 <script src="../lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="../lib/bootstrap/js/bootstrap.bundle.min.js" ></script>
 
 </html>
