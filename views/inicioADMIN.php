@@ -32,9 +32,10 @@
                     <ul class="nav">
                         <li class="nav-item">
                             <a href="ISADMIN.php" class="nav-link link-dark px-2">Bienvenido, 
-                                <?php session_name("usuario");
-                                      session_start();
-                                      echo ucfirst($_SESSION["Nombre"])?> 
+                                <?php 
+                                    session_name("usuarioad");
+                                    session_start();
+                                      echo $_SESSION["Nombre"];?> 
                             <i class="fas fa-sign-in-alt"></i></a>
                         </li>
                     </ul>
@@ -86,7 +87,7 @@
                                     </div>
                                 </div>
                                 <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>
-                                <a href="consultas/Inmuebles.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
+                                <a href="../views/consultas/Inmuebles.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                                 
                             </div>
                         </div>
@@ -105,7 +106,7 @@
                                         </div>
                                     </div>
                                     <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>
-                                    <a href="consultas_Admin/edificios.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
+                                    <a href="../views/consultas_Admin/edificios.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                                     
                                 </div>
                             </div>
@@ -122,7 +123,7 @@
                                         </div>
                                     </div>
                                     <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>
-                                    <a href="consultas_Admin/areaComunC.php" class="btn btn btn-outline-prima btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
+                                    <a href="../views/consultas_Admin/areaComunC.php" class="btn btn btn-outline-prima btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                                     <a href="consultas_Admin/reservas.php" class="btn btn btn-outline-prima btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                                     
                                 </div>
@@ -142,7 +143,7 @@
                                 </div>
                             </div>
                             <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>
-                            <a href="consultas_Admin/visitantes.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
+                            <a href="../views/consultas/visitantes.php" class="btn btn-outline-primar btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                             </div>
                         </div>
                     </div>
@@ -158,7 +159,7 @@
                                     </div>
                                 </div>
                                 <p class="card-text fondo-azul-fuerte p-3 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita neque vero ducimus facilis accusantium exercitationem ea iusto consectetur doloremque. Illum!</p>
-                                <a href="#" class="btn btn btn-outline-prima btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
+                                <a href="../views/consultas/reportes.php" class="btn btn btn-outline-prima btn-lg active" role="button" aria-pressed="true"><h4 class="fw-bold px-5 fs-3">Ir</h4></a>
                                 
                             </div>
                         </div>

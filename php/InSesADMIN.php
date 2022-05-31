@@ -8,7 +8,7 @@
 
     if($conn){
         if($pos){
-            $consulta = "SELECT * FROM ADMINISTRADOR WHERE CORREO= '$correo' AND CONTRASEÑA = '$contra'";
+            $consulta = "SELECT * FROM ADMINISTRADOR WHERE CORREO= '$correo' AND CONTRASEÑA = '$contra';";
             $resultado = mysqli_query($conn, $consulta);
             $rows = mysqli_num_rows($resultado);
             if($rows >= 1){
@@ -17,7 +17,8 @@
                 session_start();
                 $_SESSION["Nombre"] = $extraido["NOMBRES"];
                 $_SESSION["RFC"] = $extraido["RFC"];
-                echo '<script language="javascript">alert("BIENVENIDO!");</script>';
+                //echo $_SESSION["Nombre"];
+                echo '<script language="javascript">alert("BIENVENIDO! ");</script>';
                 header ("refresh: 1; url= ../views/inicioADMIN.php"); 
                 //echo $_SESSION["Nombre"];
                 mysqli_free_result($resultado);
