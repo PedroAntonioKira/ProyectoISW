@@ -13,9 +13,10 @@
             $rows = mysqli_num_rows($resultado);
             if($rows >= 1){
                 $extraido = mysqli_fetch_array($resultado);
-                session_name("usuario");
+                session_name("usuarioad");
                 session_start();
                 $_SESSION["Nombre"] = $extraido["NOMBRES"];
+                $_SESSION["RFC"] = $extraido["RFC"];
                 echo '<script language="javascript">alert("BIENVENIDO!");</script>';
                 header ("refresh: 1; url= ../views/inicioADMIN.php"); 
                 //echo $_SESSION["Nombre"];
@@ -28,9 +29,10 @@
             $rows = mysqli_num_rows($resultado);
             if($rows >= 1){
                 $extraido = mysqli_fetch_array($resultado);
-                session_name("usuario");
+                session_name("usuariops");
                 session_start();
                 $_SESSION["Nombre"] = $extraido["NOMBRES"];
+                $_SESSION["RFC"] = $extraido["RFC"];
                 echo '<script language="javascript">alert("BIENVENIDO!");</script>';
                 header ("refresh: 1; url= ../views/inicioPS.php"); 
                 //echo $_SESSION["Nombre"];
@@ -43,9 +45,11 @@
             $rows = mysqli_num_rows($resultado);
             if($rows >= 1){
                 $extraido = mysqli_fetch_array($resultado);
-                session_name("usuario");
+                session_name("usuarioinq");
                 session_start();
                 $_SESSION["Nombre"] = $extraido["NOMBRES"];
+                $_SESSION["NCONTRATO"] = $extraido["NUMCONTRATO"];
+                $_SESSION["CURP"] = $extraido["CURP"];
                 echo '<script language="javascript">alert("BIENVENIDO!");</script>';
                 header ("refresh: 1; url= ../views/inicioINQ.php"); 
                 //echo $_SESSION["Nombre"];
