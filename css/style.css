@@ -45,15 +45,7 @@ h5{
 
 /* ------------------------------ HEADER --------------------------------- */
 
-header div,
-header span {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Chrome/Safari/Opera */
-    -khtml-user-select: none; /* Konqueror */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by any browser but < IE9 */
-}
+
 
 .site-header {
     background-color: #333333;
@@ -67,112 +59,21 @@ header span {
     min-height: 60rem;
 }
 
-.navegacion a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 2.2rem;
-    display: block;
-}
+/* ------------------------------ NAVBAR --------------------------------- */
 
-.checkResponsive {
-    display: none;  
-}
-
-.contenedorBotonesMenuResponsive {
-    height: 20vh;
-}
-
-.contenedorBotonesMenuResponsive .botonMenuResponsive01 {
-    display: none;
-}
-
-.contenedorBotonesMenuResponsive .botonMenuResponsive02 {
-    display: none;
-}
-.contenedorBotonesMenuResponsive img {
-    object-fit: cover;
-    height: 100%;
-
-    pointer-events: none;
-}
-
-.contenedorMenuPrincipal {
-    color: #ffffff;
-    height: 10vh;
-    width: 100%;
-    background-color: #173668;
-    transition: ease-in 1s background-color;
-
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Chrome/Safari/Opera */
-    -khtml-user-select: none; /* Konqueror */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by any browser but < IE9 */
-}
-
-.MenuPegajoso {
-    background-color: rgba(23, 54, 104, 0.5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-    transition: ease-in 1s background-color;
-}
-
-.MenuPegajosoAjustePagina {
-    margin-top: 10vh;
+.azul{
     background-color: #173668;
 }
 
-.AjusteMenu {
-    background-color: #173668;
-    height: 10vh;
-    display: none;
+.sep li{
+    padding: 0 5rem;
 }
 
-.contenedorMenuPrincipal ul {
-    transition: ease-in 1s background-color;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+.sep a{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-
-.contenedorMenuPrincipal ul li {
-    height: 100%;
-    border: transparent solid 1px;
-    transition: ease-in 400ms background-color, border 600ms;
-}
-
-.contenedorMenuPrincipal ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0px 20px;
-    font-weight: bolder;
-}
-
-.contenedorMenuPrincipal ul li:hover {
-    border: #ffffff solid 1px;
-    background-color: #770c81;
-}
-
-.contenedorMenuPrincipal ul li:hover a {
-    color: #ffffff;
-    font-weight: bolder;
-}
-
-.colorAzul{
-    background-color: #173668;
-}
-
 
 
 /* ------------------------------ MAIN --------------------------------- */

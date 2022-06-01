@@ -17,9 +17,8 @@
     
 }
 
-@media (min-width: 768px) {
-    .div-auxiliar{
-        height: 50px;
-    }
+.div-auxiliar{
+    height: 20px;
 }
+
 
