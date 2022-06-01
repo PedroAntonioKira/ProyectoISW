@@ -21,26 +21,8 @@
 <body >
     
     <header class="fondo-blanco">
-        <nav class="container pb-2 " >
-            <div class="py-1 bg-light border-bottom row align-items-center ">
-                <div class="col">
-                    <img src="../../img/LogoVertical.svg" height="50"></img>
-                </div>
-                <div class="d-flex flex-wrap justify-content-end col">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a href="ISADMIN.php" class="nav-link link-dark px-2">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-        <div class="AjusteMenu" id="AjusteMenu">
-
-        </div>
         <?php 
-        include_once "../../php/MenuAdmin.php";
+            include_once "../plantilla/header2.php";
         ?>
     </header>
 

@@ -20,26 +20,8 @@
 </head>
 <body >
     <header class="fondo-blanco">
-        <nav class="container pb-2 " >
-            <div class="py-1 bg-light border-bottom row align-items-center ">
-                <div class="col">
-                    <img src="../../img/LogoVertical.svg" height="50"></img>
-                </div>
-                <div class="d-flex flex-wrap justify-content-end col">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a href="ISADMIN.php" class="nav-link link-dark px-2">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-        <div class="AjusteMenu" id="AjusteMenu">
-
-        </div>
         <?php 
-        include_once "../../php/MenuAdmin.php";
+            include_once "../plantilla/header2.php";
         ?>
     </header>
 
@@ -48,10 +30,13 @@
             <h1 class="p-5">Control de reportes</h1>
             <div class="parent px-5 ">
                 <div class="div2"> 
-                    <form method="post">
-                    <input type="date" name="fecha">
-                    <input type="submit" value="BUSCAR">
-                    </form>
+                    <div class="d-flex justify-content-end py-3">
+                        <form method="post">
+                            <input type="date" name="fecha" class="align-middle">
+                            <input type="submit" value="BUSCAR" class="btn btn-info" style="font-size: 1.3rem">
+                        </form>
+                    </div>
+
                     <?php
                         $consulta = "select R.ID AS ID_R, R.TIPO AS TIPO_R, DATE_FORMAT(FECHA, '%d/%m/%y') AS FECHA, ESTATUS, DESCRIPCIÓN, I.NOMBRE AS NOMBRE_I, AP_PATERNO, AP_MATERNO from reportes R, inquilino I where R.NUMCONTRATO = I.NUMCONTRATO;";
                         include("../../php/conexionbd.php");
@@ -85,19 +70,19 @@
                             <form action='' method = 'POST'>
                                 <tr>
                                     <td style='width: 8%' class='align-middle'>
-                                        <input  id='floatingPassword' class='form-control-plaintext'  name='ID_reporte' value='$id_r'>
+                                        <input  id='' class='form-control-plaintext'  name='ID_reporte' value='$id_r'>
                                     </td>
                                     <td style='width: 12%' class='align-middle'>
-                                        <input  id='floatingPassword' name='fecha' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$fecha'>
+                                        <input  id='' name='fecha' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$fecha'>
                                     </td>
-                                    <td style='width: 13%' class='align-middle'>
-                                        <input  id='floatingPassword' name='tipo' class='form-control-plaintext' value='$tipo'>
+                                    <td style='width: 12%' class='align-middle'>
+                                        <input  id='' name='tipo' class='form-control-plaintext' value='$tipo'>
                                     </td>
                                     <td style='width: 22%' class='align-middle'>
-                                        <input  id='floatingPassword' name='nombre' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$nombre'>
+                                        <input  id='' name='nombre' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$nombre'>
                                     </td>
-                                    <td style='width: 37%' class='align-middle'>
-                                        <input  id='floatingPassword' name='descripcion' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$des'>
+                                    <td style='width: 38%' class='align-middle'>
+                                        <input  id='' name='descripcion' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$des'>
                                     </td>
                                    
                                     <td>

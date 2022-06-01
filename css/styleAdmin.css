@@ -17,9 +17,14 @@
     
 }
 
-@media (min-width: 768px) {
-    .div-auxiliar{
+.div-auxiliar{
+    height: 40px;
+}
+
+@media (min-width: 768px){
+    .div-auxiliar {
         height: 50px;
     }
 }
+
 
