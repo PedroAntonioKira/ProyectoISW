@@ -111,8 +111,9 @@
                         <!-- form-group end.// -->
                     </div>
 
-                    <div class="form-group d-flex justify-content-end p-5">
-                        <input type="submit" class="btn btn-outline-primary" name="btnR" id="btn" value="Registrar" style="font-size: 1.5rem;">
+                    <div class="form-group d-flex justify-content-between p-5">
+                        <a type="submit" href="../consultas/Adinquilinos.php" class="btn btn-outline-primary" name="btnC" id="btnC" value="Cancelar" style="font-size: 1.5rem;">Cancelar</a>
+                        <input type="submit" class="btn btn-outline-dark" name="btnR" id="btn" value="Registrar" style="font-size: 1.5rem;">
                     </div>
                     <!-- form-group// -->
                 </form>
