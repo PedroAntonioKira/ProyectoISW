@@ -22,29 +22,8 @@
 <body>
     
     <header class="">
-        <div class="container pb-2 d-none d-sm-node d-md-block" >
-            <div class="py-1 border-bottom row align-items-center ">
-                <div class="col">
-                    <img src="../img/LogoVertical.svg" height="50"></img>
-                </div>
-                <div class="d-flex flex-wrap justify-content-end col">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a href="ISADMIN.php" class="nav-link link-dark px-2">Bienvenido, 
-                                <?php 
-                                    session_name("usuarioad");
-                                    session_start();
-                                      echo $_SESSION["Nombre"];?> 
-                            <i class="fas fa-sign-in-alt"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        
         <?php 
-        include_once "../php/MenuAdmin.php";
+        include_once "plantilla/header.php";
         ?>
     </header>
     
@@ -180,6 +159,5 @@
 
 <!-- Librerias Bootstrap -->
 <script src="../lib/bootstrap/js/bootstrap.min.js" ></script>
-<script src="../lib/bootstrap/js/bootstrap.bundle.min.js" ></script>
 
 </html>

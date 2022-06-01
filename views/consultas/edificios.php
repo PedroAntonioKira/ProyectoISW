@@ -21,26 +21,8 @@
 <body >
     
     <header class="fondo-blanco">
-        <nav class="container pb-2 " >
-            <div class="py-1 bg-light border-bottom row align-items-center ">
-                <div class="col">
-                    <img src="../../img/LogoVertical.svg" height="50"></img>
-                </div>
-                <div class="d-flex flex-wrap justify-content-end col">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a href="ISADMIN.php" class="nav-link link-dark px-2">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-        <div class="AjusteMenu" id="AjusteMenu">
-
-        </div>
         <?php 
-        include_once "../../php/MenuAdmin.php";
+            include_once "../plantilla/header2.php";
         ?>
     </header>
 
@@ -57,10 +39,10 @@
                             $resultado = mysqli_query($conn, $consulta);
                         }
                         ?>
-                            <table class="table table-striped table-hover">
+                            <table class="table table-striped table-hover ">
                                 <thead class="table-light">
                                     <tr>
-                                        <th scope="col">ID SECCIÓN</td>
+                                        <th scope="col" class="ps-5 ">ID SECCIÓN</td>
                                         <th scope="col">NOMBRE DE SECCIÓN</td>
                                     </tr>
                                 </thead>
@@ -72,15 +54,15 @@
                             $secc= $fila->NOMBRE;
                             echo "
                             <form action='../../php/ecInmueble.php' method = 'POST'>
-                                <tr>
-                                    <td style='width: 10%' >
+                                <tr class=''>
+                                    <td style='width: 15% ' class='ps-5 '>
                                         <input  id='floatingPassword' class='form-control-plaintext' name='id' value='$ided'>
                                     </td>
-                                    <td style='width: 25%' class='align-middle'>
+                                    <td style='width: 70%' class='align-middle '>
                                         <input  id='floatingPassword' name='dim' class='form-control' style='font-size: 1.4rem; width: 100%' value='$secc'>
                                     </td>
                                     
-                                    <td>
+                                    <td style='width: 15%' class='ps-5 '>
                                         <button type='submit' class='btn btn-light' name='cambiar'>
                                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
                                             <path d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z'></path>
