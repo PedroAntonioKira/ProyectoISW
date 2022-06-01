@@ -32,7 +32,7 @@
                     <ul class="nav">
                         <li class="nav-item">
                             <a href="ISADMIN.php" class="nav-link link-dark px-2">Bienvenido, 
-                                <?php session_name("usuario");
+                                <?php session_name("usuariops");
                                       session_start();
                                       echo ucfirst($_SESSION["Nombre"])?> 
                             <i class="fas fa-sign-in-alt"></i></a>

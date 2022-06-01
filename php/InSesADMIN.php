@@ -25,7 +25,7 @@
                 mysqli_close($conn);
             }      
         }else if($pos2){
-            $consulta = "SELECT * FROM PERSONAL_SEGURIDAD WHERE CORREO ='$correo' AND CONTRASEÑA = '$contra';";
+            $consulta = "SELECT * FROM PERSONAL_DE_SEGURIDAD WHERE CORREO ='$correo' AND CONTRASEÑA = '$contra';";
             $resultado = mysqli_query($conn, $consulta);
             $rows = mysqli_num_rows($resultado);
             if($rows >= 1){
@@ -35,7 +35,7 @@
                 $_SESSION["Nombre"] = $extraido["NOMBRES"];
                 $_SESSION["RFC"] = $extraido["RFC"];
                 echo '<script language="javascript">alert("BIENVENIDO!");</script>';
-                header ("refresh: 1; url= ../views/inicioPS.php"); 
+                header ("refresh: 1; url= ../views/inicioPSeguridad.php"); 
                 //echo $_SESSION["Nombre"];
                 mysqli_free_result($resultado);
                 mysqli_close($conn);
