@@ -12,15 +12,17 @@
             $resultado = mysqli_query($conn, $consulta);
             $rows = mysqli_num_rows($resultado);
             if($rows >= 1){
+                
                 $extraido = mysqli_fetch_array($resultado);
-                session_name("usuarioad");
+                session_id("usuarioad");
                 session_start();
                 $_SESSION["Nombre"] = $extraido["NOMBRES"];
-                $_SESSION["RFC"] = $extraido["RFC"];
+                $_SESSION["RFCad"] = $extraido["RFC"];
                 //echo $_SESSION["Nombre"];
                 echo '<script language="javascript">alert("BIENVENIDO! ");</script>';
                 header ("refresh: 1; url= ../views/inicioADMIN.php"); 
                 //echo $_SESSION["Nombre"];
+                //echo session_id();
                 mysqli_free_result($resultado);
                 mysqli_close($conn);
             }      
@@ -30,13 +32,14 @@
             $rows = mysqli_num_rows($resultado);
             if($rows >= 1){
                 $extraido = mysqli_fetch_array($resultado);
-                session_name("usuariops");
+                session_id("usuariops");
                 session_start();
                 $_SESSION["Nombre"] = $extraido["NOMBRES"];
                 $_SESSION["RFC"] = $extraido["RFC"];
                 echo '<script language="javascript">alert("BIENVENIDO!");</script>';
                 header ("refresh: 1; url= ../views/inicioPSeguridad.php"); 
                 //echo $_SESSION["Nombre"];
+                //echo session_id();
                 mysqli_free_result($resultado);
                 mysqli_close($conn);
             }      
@@ -45,15 +48,17 @@
             $resultado = mysqli_query($conn, $consulta);
             $rows = mysqli_num_rows($resultado);
             if($rows >= 1){
+                
                 $extraido = mysqli_fetch_array($resultado);
-                session_name("usuarioinq");
+                session_id("usuarioinq");
                 session_start();
-                $_SESSION["Nombre"] = $extraido["NOMBRES"];
+                $_SESSION["Nombre"] = $extraido["NOMBRE"];
                 $_SESSION["NCONTRATO"] = $extraido["NUMCONTRATO"];
                 $_SESSION["CURP"] = $extraido["CURP"];
                 echo '<script language="javascript">alert("BIENVENIDO!");</script>';
                 header ("refresh: 1; url= ../views/inicioINQ.php"); 
                 //echo $_SESSION["Nombre"];
+                //echo session_id();
                 mysqli_free_result($resultado);
                 mysqli_close($conn);
             }      
