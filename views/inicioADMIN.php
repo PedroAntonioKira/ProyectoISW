@@ -71,7 +71,7 @@
                                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                                             <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
                                         </svg>
-                                        <a class="nav-link ps-4" href="registros/registroInquilino.php">Consultar Inquilinos</a>
+                                        <a class="nav-link ps-4" href="consultas/Adinquilinos.php">Consultar Inquilinos</a>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
                                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                                             <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
                                         </svg>
-                                        <a class="nav-link ps-4" href="registros/registroInquilino.php">Consultar Inmuebles</a>
+                                        <a class="nav-link ps-4" href="consultas/visitantes.php">Consultar Inmuebles</a>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +155,7 @@
                                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                                             <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
                                         </svg>
-                                        <a class="nav-link ps-4" href="registros/registroInquilino.php">Consultar Edificios</a>
+                                        <a class="nav-link ps-4" href="consultas/edificios.php">Consultar Edificios</a>
                                     </div>
                                 </div>
                             </div>
@@ -222,13 +222,14 @@
                             </div>
                             <div class="card-text fondo-azul-fuerte p-3 fs-4">
                                     <?php
-                                        $fecha = date("Y") . "/" . date("m") . "/" . date("d");
-                                        $año = date("Y");
-                                        $mes = date("m");
-                                        $dia = date("d");
+                                        date_default_timezone_set('America/Monterrey');
+                                        $fecha = date("Y-m-d");
+                                        //$año = date("Y");
+                                        //$mes = date("m");
+                                        //$dia = date("d");
                                         //echo "<script language='javascript'>alert($dia);</script>";
                                         //echo "<script language='javascript'>alert($fecha);</script>";
-                                        $consulta = "SELECT count(*) FROM visitante WHERE FECHA = $fecha;";
+                                        $consulta = "SELECT count(*) FROM visitante WHERE FECHA = '$fecha';";
                                         include("../php/conexionbd.php");
 
                                         if($conn){
@@ -243,13 +244,13 @@
                                             <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
                                             <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
                                         </svg>
-                                        <a class="nav-link ps-4" href="registros/registroEdificio.php">Registrar Nuevo Edificio</a>
+                                        <a class="nav-link ps-4" href="registros/registroVisitas.php">Registrar Nuevo Edificio</a>
                                     </div>
                                     <div class="alert alert-primary d-flex align-items-center" role="alert">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
                                             <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/>
                                         </svg>
-                                        <a class="nav-link ps-4" href="registros/registroInquilino.php">Consultar visitas</a>
+                                        <a class="nav-link ps-4" href="consultas/visitantes.php">Consultar visitas </a>
                                     </div>
                             </div>
                         </div>
@@ -283,7 +284,7 @@
                                             <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
                                             <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm4 7.793 1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 1 1 .708-.708L8 9.293Z"/>
                                         </svg>
-                                        <a class="nav-link ps-4" href="consultas/areaComunC.php">Consultar Reportes</a>
+                                        <a class="nav-link ps-4" href="consultas/reportes.php">Consultar Reportes</a>
                                     </div>
                         
                                 </div>

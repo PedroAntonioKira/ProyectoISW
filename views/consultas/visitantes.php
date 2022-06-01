@@ -31,7 +31,9 @@
             <div class="parent px-5 ">
                 <div class="div2"> 
                     <?php
-                        $consulta = "select ID_VISITA, DATE_FORMAT(FECHA, '%d/%m/%y') AS FECHA, PLACAS, NOMBRES,V.AP_MATERNO AS AP_MATERNO_V , V.AP_PATERNO AS AP_PATERNO_V, NOMBRE, I.AP_MATERNO, I.AP_PATERNO, MDELLEGADA from visitante V, inquilino I where V.NUMCONTRATO = I.NUMCONTRATO;";
+                        date_default_timezone_set('America/Monterrey');
+                        $fecha = date("Y-m-d");
+                        $consulta = "SELECT ID_VISITA, DATE_FORMAT(FECHA, '%d/%m/%y') AS FECHA, PLACAS, NOMBRES,V.AP_MATERNO AS AP_MATERNO_V , V.AP_PATERNO AS AP_PATERNO_V, NOMBRE, I.AP_MATERNO, I.AP_PATERNO, MDELLEGADA from visitante V, inquilino I WHERE V.NUMCONTRATO = I.NUMCONTRATO AND FECHA = '$fecha';";
                         include("../../php/conexionbd.php");
 
                         if($conn){

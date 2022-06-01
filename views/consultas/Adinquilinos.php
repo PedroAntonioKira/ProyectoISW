@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,6 +61,7 @@
                             $curp =$fila -> CURP;
                             $sexo = $fila-> SEXO;
                             $tipo = $fila -> TIPO;
+                            
                             echo "
                             <form action='../php/eliminarInquilino.php' method = 'POST'>
                                 <tr>
@@ -91,7 +93,9 @@
                                         </button>
                                     </td>
                                 </tr>
-                            </form>";
+                            </form>
+                            ";
+
                         }
                     
                     ?>
@@ -99,7 +103,9 @@
                         </table>
                 </div>
             </div>
+            <?php 
 
+            ?>
             <div class="contenedor pb-5 d-flex justify-content-end">
                 <a type="submit" href="../registros/registroInquilino.php" class="btn btn-outline-dark" style="font-size: 1.5rem;">Agregar Nuevo Inquilino</a>
             </div>
