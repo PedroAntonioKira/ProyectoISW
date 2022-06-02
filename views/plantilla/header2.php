@@ -85,7 +85,7 @@
                                       <a class="nav-link" href="../consultas/Adinquilinos.php">Inquilinos</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link " href="../consultas/areaComunC.php">Áreas comúnes</a>
+                                      <a class="nav-link " href="../consultas/areaComunC.php">Vehículos</a>
                                     </li>
                                     <li class="nav-item">
                                       <a class="nav-link " href="../consultas/visitantes.php">Visitas</a>
