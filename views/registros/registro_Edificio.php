@@ -46,7 +46,7 @@
                     </div>
 
                     <div class="form-group d-flex justify-content-between p-5">
-                        <a type="submit" href="../consultas_Admin/areaComunC.php" class="btn btn-outline-primary" name="btnC" id="btnC" value="Cancelar" style="font-size: 1.5rem;">Cancelar</a>
+                        <a type="submit" href="../consultas/areaComunC.php" class="btn btn-outline-primary" name="btnC" id="btnC" value="Cancelar" style="font-size: 1.5rem;">Cancelar</a>
                         <input type="submit" class="btn btn-outline-primary" name="btnR" id="btn" value="Registrar" style="font-size: 1.5rem;">
                     </div>
                     <!-- form-group// -->

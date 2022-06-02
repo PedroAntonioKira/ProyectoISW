@@ -91,7 +91,6 @@
                                 <div class="card-text fondo-azul-fuerte p-3 fs-4">
                                         <?php
                                             $consulta = "SELECT count(*) FROM inmueble; ";
-                                            include("../php/conexionbd.php");
 
                                             if($conn){
                                                 $resultado = mysqli_query($conn, $consulta);
@@ -134,7 +133,6 @@
                                 <div class="card-text fondo-azul-fuerte p-3 fs-4">
                                     <?php
                                         $consulta = "SELECT count(*) FROM seccion; ";
-                                        include("../php/conexionbd.php");
 
                                         if($conn){
                                             $resultado = mysqli_query($conn, $consulta);
@@ -175,7 +173,6 @@
                                 <div class="card-text fondo-azul-fuerte p-3 fs-4">
                                     <?php
                                         $consulta = "SELECT count(*) FROM area_comun; ";
-                                        include("../php/conexionbd.php");
 
                                         if($conn){
                                             $resultado = mysqli_query($conn, $consulta);
@@ -224,13 +221,7 @@
                                     <?php
                                         date_default_timezone_set('America/Monterrey');
                                         $fecha = date("Y-m-d");
-                                        //$año = date("Y");
-                                        //$mes = date("m");
-                                        //$dia = date("d");
-                                        //echo "<script language='javascript'>alert($dia);</script>";
-                                        //echo "<script language='javascript'>alert($fecha);</script>";
                                         $consulta = "SELECT count(*) FROM visitante WHERE FECHA = '$fecha';";
-                                        include("../php/conexionbd.php");
 
                                         if($conn){
                                             $resultado = mysqli_query($conn, $consulta);
@@ -270,7 +261,6 @@
                                 <div class="card-text fondo-azul-fuerte p-3 fs-4">
                                     <?php
                                         $consulta = "SELECT count(*) FROM reportes; ";
-                                        include("../php/conexionbd.php");
 
                                         if($conn){
                                             $resultado = mysqli_query($conn, $consulta);
