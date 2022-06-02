@@ -38,7 +38,7 @@
                     </div>
 
                     <?php
-                        $consulta = "select R.ID AS ID_R, R.TIPO AS TIPO_R, DATE_FORMAT(FECHA, '%d/%m/%y') AS FECHA, ESTATUS, DESCRIPCIÓN, I.NOMBRE AS NOMBRE_I, AP_PATERNO, AP_MATERNO from reportes R, inquilino I where R.NUMCONTRATO = I.NUMCONTRATO;";
+                        $consulta = "SELECT R.ID AS ID_R, R.TIPO AS TIPO_R, DATE_FORMAT(FECHA, '%d/%m/%y') AS FECHA, ESTATUS, DESCRIPCIÓN, I.NOMBRE AS NOMBRE_I, AP_PATERNO, AP_MATERNO from reportes R, inquilino I where R.NUMCONTRATO = I.NUMCONTRATO AND R.CURP = I.CURP;";
                         include("../../php/conexionbd.php");
                         
                         if($conn){
