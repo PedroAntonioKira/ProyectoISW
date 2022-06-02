@@ -32,34 +32,20 @@ label {
 }
 
 .fomulario__input__error {
-  outline: rgb(0, 0, 0) solid 2px;
-  background-color: rgb(233, 93, 93);
+  outline: #141313 solid 4px;
+  background-color: rgb(126, 15, 1);
   color: #ffffff;
   text-align: center;
-  height: 300px;
+  height: auto;
   margin: 0;
   font-size: 15px;
   position: relative;
   left: 10px;
   width: 95%;
   border-radius: 50px;
-  padding: 0 10px;
-  padding-top: 20px;
+  padding: 10px 10px;
+  margin-bottom: 20px;
   display: none;
-}
-
-.fomulario__input__ayuda {
-  height: 160px;
-  background-color: rgb(233, 93, 93);
-  color: #ffffff;
-  text-align: center;
-  margin: 0;
-  position: absolute;
-  top: 45%;
-  left: 40px;
-  width: 75%;
-  display: none;
-  /*opacity: 0;*/
 }
 
 .formulario__mensaje {
@@ -89,8 +75,9 @@ label {
   /*opacity: 0;*/
 }
 
-.correcto input {
-  border: 4px solid #214ee2;
+.correcto input,
+.form-group input {
+  border: 4px solid #000000;
 }
 
 .incorrecto {
