@@ -20,7 +20,6 @@
     
 </head>
 <body>
-    
     <div class="ancho-ini m-5 mx-auto border-light" >
         <div class="container card">
             <div class="card-body">
@@ -37,16 +36,8 @@
                         <i class="formulario__validacion-estado bi bi-x-octagon-fill" id="formulario__validacion_estado"></i>
                     </div>
                     <p class="fomulario__input__error" id="fomulario__input__error">
-                        Debe ser una direccion de correo existente, con terminacion valida, como las siguientes: <br>
-                        <div class="fomulario__input__ayuda" id="fomulario__input__ayuda">
-                            @admin.comsafe.com <br>
-                            @pseg.comsafe.com <br>
-                            @gmail.com <br>
-                            @outlook.com <br>
-                            @hotmail.com <br>
-                            @yahoo.com <br>
-                            @alumno.ipn.com <br>
-                        </div>
+                        Favor de verificar el correo electronico, no es valido. <br>
+                        Para mayor informacion presiona <button type="button" onclick="mostrarAyuda()">Aqui</button>
                     </p>
                     <div id="emailHelp" class="form-text">
                         Nota: Utiliza el correo que te ha proporcionado la empresa.
@@ -58,7 +49,7 @@
                         <a class="card-link" href="#">¿Has olvidado la contraseña?</a>
                     </div>
                     <input  name="pass" class="form-control" placeholder="******" 
-                            type="password" style="font-size: 1.5rem;" id="pass">
+                            type="password" style="font-size: 1.5rem;" id="pass" value="">
                 </div> <!-- form-group// --> 
 
                 <div class="formulario__mensaje" id="formulario__mensaje">
@@ -83,7 +74,9 @@
 
             </div> <!-- card-body.// -->
             <div class="card-footer text-center">
-                <div class="d-flex justify-content-center"><p class="mt-4 mb-3 text-muted">© 2022 ComSafe</p></div>
+                <div class="d-flex justify-content-center">
+                    <p class="mt-4 mb-3 text-muted">© 2022 ComSafe</p>
+                </div>
             </div>
         </div>
         
