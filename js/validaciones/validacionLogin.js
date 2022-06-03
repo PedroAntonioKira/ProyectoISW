@@ -15,14 +15,29 @@ let inputCorreo = 0;
 const expresionRegular = {
     //correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9_.+-]+\.[a-zA-Z0-9_.+-]+$/
     //correo: /^[a-zA-Z0-9_.+-]+(@admin+\.comesafe+\.com|@pseg+\.comesafe+\.com|@gmail+\.com|@hotmail+\.com|@outlook+\.com|@yahoo+\.com|@alumno+\.ipn+\.mx)+$/
-    correo: /^[a-zA-Z0-9_.+-]+(@admin+\.comesafe+\.com|@pseg+\.comesafe+\.com|@gmail+\.com|@hotmail+\.com|@outlook+\.com|@yahoo+\.com|@alumno+\.ipn+\.mx|@pseguridad+\.comesafe+\.com)+$/
+    //correo: /^[a-zA-Z0-9_.+-]+(@admin+\.comesafe+\.com|@pseg+\.comesafe+\.com|@gmail+\.com|@hotmail+\.com|@outlook+\.com|@yahoo+\.com|@alumno+\.ipn+\.mx|@pseguridad+\.comesafe+\.com)+$/
+    correo01: /^[a-zA-Z0-9_.+-]+@admin+\.comesafe+\.com+$/,
+    correo02: /^[a-zA-Z0-9_.+-]+@pseg+\.comesafe+\.com+$/,
+    correo03: /^[a-zA-Z0-9_.+-]+@pseguridad+\.comesafe+\.com+$/,
+    correo04: /^[a-zA-Z0-9_.+-]+@gmail+\.com+$/,
+    correo05: /^[a-zA-Z0-9_.+-]+@alumno+\.ipn+\.mx+$/,
+    correo06: /^[a-zA-Z0-9_.+-]+@hotmail+\.com+$/,
+    correo07: /^[a-zA-Z0-9_.+-]+@outlook+\.com+$/,
+    correo08: /^[a-zA-Z0-9_.+-]+@yahoo+\.com+$/
 }
+
+let correoValido = false;
 
 const validarFormulario = (e) => {
     //console.log(e.target.value);
+    correoValido = expresionRegular.correo01.test(e.target.value) || expresionRegular.correo02.test(e.target.value) || expresionRegular.correo03.test(e.target.value) || expresionRegular.correo04.test(e.target.value) || expresionRegular.correo05.test(e.target.value) || expresionRegular.correo06.test(e.target.value) || expresionRegular.correo07.test(e.target.value) || expresionRegular.correo08.test(e.target.value);
+    //correoValido = expresionRegular.correo01.test(e.target.value) || expresionRegular.correo02.test(e.target.value);
+    //correoValido = expresionRegular.correo03.test(e.target.value) || expresionRegular.correo04.test(e.target.value);
+    //correoValido = expresionRegular.correo05.test(e.target.value) || expresionRegular.correo06.test(e.target.value);
+    //correoValido = expresionRegular.correo07.test(e.target.value) || expresionRegular.correo08.test(e.target.value);
     switch(e.target.name){
         case "correo":
-            if(expresionRegular.correo.test(e.target.value)){
+            if(correoValido){
                 fomulario__input__error.style.display="none";
                 e.target.style.border="solid 4px #09c738";
                 formulario__validacion_estado.style.opacity="0";
@@ -49,7 +64,7 @@ inputs.forEach((input) => {
 });
 
 enviar.onclick = function(e) {
-    console.log("gol");
+    console.log("$gol$");
     formulario__mensaje_exito.style.display="block";
 }
 
