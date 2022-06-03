@@ -79,13 +79,13 @@
                                 <div class="collapse navbar-collapse d-md-flex justify-content-center" id="navbarNav">
                                   <ul class="navbar-nav sep ">
                                     <li class="nav-item">
-                                      <a class="nav-link " aria-current="page" href="../inicioADMIN.php">Inicio</a>
+                                      <a class="nav-link " aria-current="page" href="../inicioPSeguridad.php">Inicio</a>
                                     </li>
                                     <li class="nav-item">
                                       <a class="nav-link" href="../consultas/Adinquilinos.php">Inquilinos</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link " href="../consultas/areaComunC.php">Vehículos</a>
+                                      <a class="nav-link " href="../consultas/vehiculos.php">Vehículos</a>
                                     </li>
                                     <li class="nav-item">
                                       <a class="nav-link " href="../consultas/visitantes.php">Visitas</a>

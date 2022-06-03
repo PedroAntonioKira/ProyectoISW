@@ -24,7 +24,7 @@
     
     <header class="">
         <?php 
-            include_once "plantilla/header2.php";
+            include_once "plantilla/header3.php";
         ?>
     </header>
     
