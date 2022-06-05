@@ -1,0 +1,13 @@
+.centrar{
+    margin: 3rem;
+}
+
+@media (min-width: 768px) {
+    .centrar{
+        transform: translate(-50%,-50%)!important;
+        left: 50%!important;
+        top: 50%!important;
+        position: absolute!important;
+        margin: 0;
+    }
+}

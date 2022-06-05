@@ -12,6 +12,7 @@
     <!-- Hojas CSS propias -->
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/styleCentrar.css">
 
     <!--CDNs externos-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -19,7 +20,8 @@
 </head>
 <body>
     
-    <div class="ancho-ini-ri m-4 mx-auto border border-primary rounded p-3 " >
+    <div class="centrar">
+    <div class="m-4 mx-auto border border-primary rounded p-3 " >
         <div class="card border-light">
             <article class="card-body">
                 <header class="mb-2 pb-5">
@@ -81,6 +83,7 @@
             <!-- card-body end .// -->
             <div class="card-footer text-center text-muted">© 2022 ComSafe. </div>
         </div>
+    </div>
     </div>
     
 </body>

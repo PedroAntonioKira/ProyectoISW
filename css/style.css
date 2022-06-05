@@ -174,7 +174,7 @@ footer {
 
 /* REGSTROINQUILINO */
 .ancho-ini-ri {
-    width: 80%;
+    width: 100%;
     font-size: small;
 }
 
@@ -184,7 +184,7 @@ footer {
 
 @media (min-width: 768px) {
     .ancho-ini-ri {
-        width: 50%;
+        width: 100%;
         font-size: 1.5rem;
     }
 
@@ -192,6 +192,8 @@ footer {
         font-size: 2.6rem;
     }
 }
+
+
 
 /* FORM ERROR */
 

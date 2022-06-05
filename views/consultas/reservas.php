@@ -27,7 +27,7 @@
 
     <div class="fondo-azul p-5">
         <div class="contenedor fondo-blanco m-auto">
-            <h1 class="p-5">Reservación de Áreas Comúnes</h1>
+            <h1 class="pt-5 px-5">Reservación de Áreas Comúnes</h1>
             <div class="parent px-5 ">
                 <div class="div2"> 
                     <?php
@@ -62,7 +62,7 @@
                             echo "
                             <form action='' method = 'POST'>
                                 <tr>
-                                    <td style='width: 12%' class='align-middle'>
+                                    <td style='width: 10%' class='align-middle'>
                                         <input  id='floatingPassword' class='form-control-plaintext'  name='numcontrato' value='$fecha'>
                                     </td>
                                     <td style='width: 25%' class='align-middle'>

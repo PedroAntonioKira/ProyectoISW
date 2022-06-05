@@ -73,16 +73,16 @@
                                         <input  id='' class='form-control-plaintext'  name='ID_reporte' value='$id_r'>
                                     </td>
                                     <td style='width: 12%' class='align-middle'>
-                                        <input  id='' name='fecha' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$fecha'>
+                                        <input  id='' name='fecha' class='form-control-plaintext' style='width: 100%; font-size: 1.4rem;' value='$fecha'>
                                     </td>
                                     <td style='width: 12%' class='align-middle'>
                                         <input  id='' name='tipo' class='form-control-plaintext' value='$tipo'>
                                     </td>
                                     <td style='width: 22%' class='align-middle'>
-                                        <input  id='' name='nombre' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$nombre'>
+                                        <input  id='' name='nombre' class='form-control-plaintext' style='width: 100%; font-size: 1.4rem;' value='$nombre'>
                                     </td>
                                     <td style='width: 38%' class='align-middle'>
-                                        <input  id='' name='descripcion' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$des'>
+                                        <input  id='' name='descripcion' class='form-control-plaintext' style='width: 100%; font-size: 1.4rem;' value='$des'>
                                     </td>
                                    
                                     <td>

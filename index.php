@@ -12,7 +12,6 @@
     <!-- Hojas CSS propias -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/CarruselPrincipal.css">
 
     <!--CDNs externos-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -38,10 +37,7 @@
             </div>
         </div>
     </header>
-    
-    <div class="AjusteMenu" id="AjusteMenu">
 
-    </div>
 
     <main class="cuerpoPrincipalPagina " id="cuerpoPrincipalPagina" s>
         <section class="contenedor seccion p-5">
@@ -181,7 +177,5 @@
 <script src="lib/bootstrap/js/bootstrap.min.js" ></script>
 
 <!-- Funciones Propias JS -->
-<script src="js/MenuPegajoso.js">  </script>
-<script src="js/validacionCheckBox.js">  </script>
 <script src="js/slider-testimonial.js">  </script>
 </html>

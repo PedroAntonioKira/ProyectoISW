@@ -25,7 +25,10 @@
                 //echo session_id();
                 mysqli_free_result($resultado);
                 mysqli_close($conn);
-            }      
+            }  else {
+                header("Location: ../views/login.php");
+                die();
+            }     
         }else if($pos2){
             $consulta = "SELECT * FROM PERSONAL_DE_SEGURIDAD WHERE CORREO ='$correo' AND CONTRASEÑA = '$contra';";
             $resultado = mysqli_query($conn, $consulta);
@@ -42,6 +45,9 @@
                 //echo session_id();
                 mysqli_free_result($resultado);
                 mysqli_close($conn);
+            } else {
+                header("Location: ../views/login.php");
+                die();
             }      
         }else{
             $consulta = "SELECT * FROM INQUILINO WHERE CORREO = '$correo' AND CONTRASEÑA = '$contra';";
@@ -61,7 +67,10 @@
                 //echo session_id();
                 mysqli_free_result($resultado);
                 mysqli_close($conn);
-            }      
-        }
+            } else {
+                header("Location: ../views/login.php");
+                die();
+            }    
+        } 
     }
 ?>

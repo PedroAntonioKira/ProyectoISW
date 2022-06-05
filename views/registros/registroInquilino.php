@@ -12,6 +12,7 @@
     <!-- Hojas CSS propias -->
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/styleCentrar.css">
 
     <!--CDNs externos-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -19,7 +20,8 @@
 </head>
 <body>
     
-    <div class="ancho-ini-ri m-4 mx-auto border border-primary rounded p-3 " >
+    <div class="centrar">
+        <div class=" mx-auto border border-primary rounded p-3 " >
         <div class="card border-light">
             <article class="card-body">
                 <header class="mb-2 pb-5">
@@ -33,7 +35,7 @@
                 
                 <form action="../../php/regInquilinos.php" name="Inicioses2" method="post">
                     <!--Nombre completo-->
-                    <div class="row g-3 px-5 ">
+                    <div class="row g-3 px-md-5 ">
                         <div class="col-md-4 form-group ">
                             <label>Nombre*</label>
                             <input required type="text" class="form-control" name="Nombre" id="Nombre" autofocus style="font-size: 1.5rem;">
@@ -54,7 +56,7 @@
                         <!-- form-group end.// -->
                     </div>
                     <!-- Correo -->
-                    <div class="form-group form-row px-5 py-2">
+                    <div class="form-group form-row px-md-5 py-2">
                         <label class="col-md-3 col-form-label" >Correo electrónico*</label>
                         <div class="col">
                             <input required type="text" class="form-control mail" placeholder="Ej. john@gmail.com" id="Correo_Electronico" name="Correo_Electronico" style="font-size: 1.5rem;">
@@ -63,7 +65,7 @@
                     </div>
                     
                     <!-- Más info -->
-                    <div class="row g-3 px-5 py-2">
+                    <div class="row g-3 px-md-5 py-2">
                         <div class="col form-group ">
                             <label>CURP*</label>
                             <input required type="text" class="form-control" name="Curp" id="CP" style="font-size: 1.5rem;">
@@ -72,7 +74,7 @@
                         <!-- form-group end.// -->
                     </div>
 
-                    <div class="row g-3 px-5 py-2">
+                    <div class="row g-3 px-md-5 py-2">
                         <div class="col form-group ">
                             <label>Número de contrato*</label>
                             <input required type="text" class="form-control" name="NumCont" id="NC" style="font-size: 1.5rem;">
@@ -91,7 +93,7 @@
                         <!-- form-group end.// -->
                     </div>
 
-                    <div class="form-group d-flex justify-content-between p-5">
+                    <div class="form-group d-flex justify-content-between p-md-5 pt-5">
                         <a type="submit" href="../consultas/Adinquilinos.php" class="btn btn-outline-primary" name="btnC" id="btnC" value="Cancelar" style="font-size: 1.5rem;">Cancelar</a>
                         <input type="submit" class="btn btn-outline-dark" name="btnR" id="btn" value="Registrar" style="font-size: 1.5rem;">
                     </div>
@@ -102,6 +104,7 @@
             <!-- card-body end .// -->
             <div class="card-footer text-center text-muted">© 2022 ComSafe. </div>
         </div>
+    </div>
     </div>
     
 </body>
