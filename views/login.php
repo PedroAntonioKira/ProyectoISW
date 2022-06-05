@@ -30,14 +30,10 @@
                 <div class="form-group p-3">
                     <label for="correo">Correo electrónico.</label>
                     <div class="fomulario__input__input correcto">
-                        <input  name="correo" class="form-control" 
-                                placeholder="ex. name@gmail.com" type="email" 
-                                style="font-size: 1.5rem;" id="correo">
-                        <i class="formulario__validacion-estado bi bi-x-octagon-fill" id="formulario__validacion_estado"></i>
+                        <input  name="correo" class="form-control" placeholder="ex. name@gmail.com" type="email" style="font-size: 1.5rem;" id="correo">                    
                     </div>
                     <p class="fomulario__input__error" id="fomulario__input__error">
-                        Favor de verificar el correo electronico, no es valido. <br>
-                        Para mayor informacion presiona <button type="button" onclick="mostrarAyuda()">Aqui</button>
+                        Formato de correo electrónico incorrecto
                     </p>
                     <div id="emailHelp" class="form-text">
                         Nota: Utiliza el correo que te ha proporcionado la empresa.

@@ -33,7 +33,7 @@
                     <?php
                         date_default_timezone_set('America/Monterrey');
                         $fecha = date("Y-m-d");
-                        $consulta = "SELECT ID_VISITA, DATE_FORMAT(FECHA, '%d/%m/%y') AS FECHA, PLACAS, NOMBRES,V.AP_MATERNO AS AP_MATERNO_V , V.AP_PATERNO AS AP_PATERNO_V, NOMBRE, I.AP_MATERNO, I.AP_PATERNO, MDELLEGADA, I.CURP from visitante V, inquilino I WHERE V.NUMCONTRATO = I.NUMCONTRATO AND V.CURP = I.CURP AND FECHA = '$fecha';";
+                        $consulta = "SELECT ID_VISITA, DATE_FORMAT(FECHA, '%d/%m/%y') AS FECHA, PLACAS, NOMBRES,V.AP_MATERNO AS AP_MATERNO_V , V.AP_PATERNO AS AP_PATERNO_V, NOMBRE, I.AP_MATERNO, I.AP_PATERNO, MDELLEGADA, I.CURP from visitante V, inquilino I WHERE V.NUMCONTRATO = I.NUMCONTRATO AND V.CURP = I.CURP ";
                         include("../../php/conexionbd.php");
 
                         if($conn){
@@ -70,7 +70,7 @@
                             echo "
                             <form action='../php/eliminarInquilino.php' method = 'POST'>
                                 <tr>
-                                    <td style='width: 9%' class='align-middle'>
+                                    <td style='width: 10%' class='align-middle'>
                                         <input  id='floatingPassword' class='form-control-plaintext'  name='ID_Visita' value='$id_v'>
                                     </td>
                                     <td style='width: 8%' class='align-middle'>
@@ -85,7 +85,7 @@
                                     <td style='width: 15%' class='align-middle'>
                                         <input  class='form-control' name='mllegada'  style='font-size: 1.4rem;' value='$mllegada'>
                                     </td>
-                                    <td style='width: 12% ' class='align-middle'>
+                                    <td style='width: 15% ' class='align-middle'>
                                         <input  class='form-control'  style='font-size: 1.4rem;' name='placas' value='$placa'>
                                     </td>
                                     <td>

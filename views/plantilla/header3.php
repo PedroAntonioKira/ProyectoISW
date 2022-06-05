@@ -8,9 +8,12 @@
                 <li class="nav-item">
                     <a href="../index.php" class="nav-link link-dark px-2 fw-bold">Bienvenido, 
                         <?php 
-                            session_name("usuarioad");
                             session_start();
-                            echo $_SESSION["Nombre"];?> 
+                            if(session_id() == "usuariops"){
+                                //session_start();
+                                echo ucwords($_SESSION["Nombre"]);
+                              }
+                        ?> 
                     <i class="fas fa-sign-in-alt"></i></a>
                 </li>
             </ul>

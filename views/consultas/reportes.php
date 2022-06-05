@@ -27,13 +27,13 @@
 
     <div class="fondo-azul p-5">
         <div class="contenedor fondo-blanco m-auto">
-            <h1 class="p-5">Control de reportes</h1>
+            <h1 class="px-5 pt-5">Control de reportes</h1>
             <div class="parent px-5 ">
                 <div class="div2"> 
                     <div class="d-flex justify-content-end py-3">
                         <form method="post">
                             <input type="date" name="fecha" class="align-middle">
-                            <input type="submit" value="BUSCAR" class="btn btn-info" style="font-size: 1.3rem">
+                            <input type="submit" value="BUSCAR" class="btn btn-outline-primary" style="font-size: 1.3rem">
                         </form>
                     </div>
 
