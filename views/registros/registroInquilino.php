@@ -85,8 +85,8 @@
                             <label>Tipo de inquilino*</label>
                             <select class="form-select form-control" style="font-size: 1.5rem;" name="TInqui" id="TI" required>
                                 <option selected disabled>Seleccionar...</option>
-                                <option value="1">Dueño</option>
-                                <option value="2">Familiar</option>
+                                <option value="DUEÑO">Dueño</option>
+                                <option value="FAMILIAR">Familiar</option>
                             </select>
                             
                         </div>

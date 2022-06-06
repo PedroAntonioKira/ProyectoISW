@@ -62,7 +62,7 @@
                 $_SESSION["NCONTRATO"] = $extraido["NUMCONTRATO"];
                 $_SESSION["CURP"] = $extraido["CURP"];
                 echo '<script language="javascript">alert("BIENVENIDO!");</script>';
-                header ("refresh: 1; url= ../views/inicioINQ.php"); 
+                header ("refresh: 1; url= ../views/inicioInquilino.php"); 
                 //echo $_SESSION["Nombre"];
                 //echo session_id();
                 mysqli_free_result($resultado);

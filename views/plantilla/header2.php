@@ -7,7 +7,7 @@
         <div class="d-flex flex-wrap justify-content-end col">
             <ul class="nav">
                 <li class="nav-item">
-                    <a href="../index.php" class="nav-link link-dark px-2 fw-bold">Bienvenido, 
+                    <a href="../../index.php" class="nav-link link-dark px-2 fw-bold">Bienvenido, 
                         <?php 
                             if(session_id() == "usuarioad"){
                               //session_start();
