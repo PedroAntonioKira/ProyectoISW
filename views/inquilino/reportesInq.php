@@ -107,6 +107,9 @@
                         </table>
                 </div>
             </div>
+            <div class="contenedor pb-5 d-flex justify-content-end">
+                <a type="submit" href="../registros/registroReporte.php" class="btn btn-outline-dark" style="font-size: 1.5rem;">Reporte Nuevo</a>
+            </div>
         </div>
     </div>
 

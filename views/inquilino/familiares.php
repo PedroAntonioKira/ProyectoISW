@@ -64,16 +64,16 @@
                             echo "
                                 <form action='../php/eliminarInquilino.php' method = 'POST'>
                                     <tr>
-                                        <td style='width: 14%' class='align-middle'>
+                                        <td style='width: 15%' class='align-middle'>
                                             <input  id='floatingPassword' class='form-control-plaintext'  name='numcontrato' value='$numcontrato'>
                                         </td>
-                                        <td style='width: 35%' class='align-middle'>
+                                        <td style='width: 25%' class='align-middle'>
                                             <input  id='floatingPassword' name='nombre' class='form-control-plaintext' style='width: 100%; font-size: 1.4rem;' value='$nombre'>
                                         </td>
-                                        <td class='align-middle'>
+                                        <td style='width: 20%' class='align-middle'>
                                             <input  id='floatingPassword' name='curp' class='form-control-plaintext' value='$curp'>
                                         </td>
-                                        <td style='width: 10%' class='align-middle'>
+                                        <td style='width: 12%' class='align-middle'>
                                             <input  class='form-control-plaintext' name='sexo'  style='font-size: 1.4rem;' value='$sexo'>
                                         </td>
                                         <td style='width: 15% ' class='align-middle'>
@@ -92,20 +92,6 @@
                         </table>
                 </div>
             </div>
-            <?php 
-
-            ?>
-            
-            <?php
-            if(session_id() == "usuariops"){
-              
-            } else {
-              echo '<div class="contenedor pb-5 d-flex justify-content-end">
-                        <a type="submit" href="../registros/registroInquilino.php" class="btn btn-outline-dark" style="font-size: 1.5rem;">Agregar Nuevo Inquilino</a>
-                    </div>';
-            }
-            
-            ?>
         </div>
     </div>
 

@@ -43,8 +43,8 @@
                         </div>
                         <div class="col form-group ">
                             <label>CURP*</label>
-                            <input required type="text" class="form-control" name="NumCont" id="NC" style="font-size: 1.5rem;" value="<?php echo $_SESSION['CURP']?>>
-                            <span class="errorNC" aria-live="polite"></span>
+                            <input required type="text" class="form-control" name="Curp" id="C" style="font-size: 1.5rem;" value="<?php echo $_SESSION['CURP']?>">
+                            <span class="errorC" aria-live="polite"></span>
                         </div>
                             <!-- form-group end.// -->
                     </div>
@@ -72,10 +72,11 @@
                         <!-- form-group end.// -->
                     </div>
                     
-
-                    <div class="form-group d-flex justify-content-end p-5">
+                    <div class="form-group d-flex justify-content-between p-md-5 pt-5">
+                        <a type="submit" href="../inquilino/reportesInq.php" class="btn btn-outline-primary" name="btnC" id="btnC" value="Cancelar" style="font-size: 1.5rem;">Cancelar</a>
                         <input type="submit" class="btn btn-outline-dark" name="btnR" id="btn" value="Registrar" style="font-size: 1.5rem;">
                     </div>
+                   
                     <!-- form-group// -->
                 </form>
                 <script src=""></script>
