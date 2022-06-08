@@ -45,7 +45,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col col-md-6 align-self-center">
-                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus facilisis enim, in mollis lorem molestie non. Quisque ac arcu vitae sem cursus elementum. Proin mollis nulla metus, vel pretium sapien interdum id.</p>
+                        <p class="text-center">COMSAFE vuelve más sencilla la administración de tu fraccionamiento, asegurando la seguriad dentro de el y manteniendo la armonía de convivencia entre los inquilinos.</p>
                     </div>
                 </div>
             </div>
@@ -53,19 +53,19 @@
                 <div class="icono">
                     <img src="img/icono1.svg" alt="Icono Seguridad">
                     <h4 >Seguridad</h4>
-                    <p>Quasi quibusdam, quos deserunt, recusandae iusto dolorem voluptatibus quaerat veritatis consectetur culpa sit dignissimos maiores iure id, magnam non voluptatum molestiae doloremque.</p>
+                    <p>Mantén el control de los vehículos y personas que ingresan al fraccionamiento ya sean personas dueñas de inmuebles del fraccionamiento o visitas. Manten también una comunicación activa con tus inquilinos por medio de reportes.</p>
                 </div>
 
                 <div class="icono">
                     <img src="img/icono2.svg" alt="Icono Mejor Precio">
                     <h4>El Mejor Precio</h4>
-                    <p>Quasi quibusdam, quos deserunt, recusandae iusto dolorem voluptatibus quaerat veritatis consectetur culpa sit dignissimos maiores iure id, magnam non voluptatum molestiae doloremque.</p>
+                    <p>Compra una de nuestras licencias, a un precio bajo con respecto a la competencia. Recuerda que la seguridad y estabilidad de tu fraccionamiento es lo más importante.</p>
                 </div>
 
                 <div class="icono">
                     <img src="img/icono3.svg" alt="Icono a Tiempo">
                     <h4>A Tiempo</h4>
-                    <p>Quasi quibusdam, quos deserunt, recusandae iusto dolorem voluptatibus quaerat veritatis consectetur culpa sit dignissimos maiores iure id, magnam non voluptatum molestiae doloremque.</p>
+                    <p>No importa en dónde estés ni que hora sea, el sistema estará disponible para ti las 24 horas del días los 365 días del año.</p>
                 </div>
             </div>
         </section>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="p-2">
                     <h4>Administración de entradas y sálidas</h4>
-                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <p>Controla la entrada y salida de personas a tu fraccioanmeinto evitando así problemas de seguridad que pongan en riesgo la integridad de tus inquilinos.</p>
                 </div>
             </div>
             <div class="col-md-6 d-flex align-items-start">
@@ -94,7 +94,7 @@
                 </div>
                 <div class="p-2">
                     <h4>Control de áreas comúnes</h4>
-                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>  
+                    <p>Con COMSAFE mantén un control y agiliza la reservación y utilización de áreas cómunes dejando de lado los tardados procesos de consulta de disponibilidad.</p>  
                 </div>
             </div>
             <div class="col-md-6 d-flex align-items-start">
@@ -105,7 +105,7 @@
                 </div>
                 <div class="p-2">
                     <h4>Disponibilidad de viviendas</h4>
-                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <p>COMSAFE te apoya en mantener el control de viviendas disponibles dentro de cada una de las secciones del fraccionamiento evitando conflictos administrativos.</p>
                 </div>
             </div>
             <div class="col-md-6 d-flex align-items-start">
@@ -116,7 +116,7 @@
                 </div>
                 <div class="p-2">
                     <h4>Comunicación vecinal</h4>
-                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <p>Con la disponibilidad de levantar reportes por parte de los inquilinos mantén el orden y las normas de convivencia entre todos los inquilinos.</p>
                 </div>
             </div>
         </div>

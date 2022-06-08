@@ -33,7 +33,7 @@
                     <?php
                         date_default_timezone_set('America/Monterrey');
                         $fecha = date("Y-m-d");
-                        $consulta = "SELECT ID_VISITA, DATE_FORMAT(FECHA, '%d/%m/%y') AS FECHA, PLACAS, NOMBRES,V.AP_MATERNO AS AP_MATERNO_V , V.AP_PATERNO AS AP_PATERNO_V, NOMBRE, I.AP_MATERNO, I.AP_PATERNO, MDELLEGADA, I.CURP from visitante V, inquilino I WHERE V.NUMCONTRATO = I.NUMCONTRATO AND V.CURP = I.CURP ";
+                        $consulta = "SELECT ID_VISITA, DATE_FORMAT(FECHA, '%d/%m/%y') AS FECHA, PLACAS, NOMBRES,V.AP_MATERNO AS AP_MATERNO_V , V.AP_PATERNO AS AP_PATERNO_V, NOMBRE, I.AP_MATERNO, I.AP_PATERNO, MDELLEGADA, I.CURP from visitante V, inquilino I WHERE V.NUMCONTRATO = I.NUMCONTRATO AND V.CURP = I.CURP AND FECHA = '$fecha'";
                         include("../../php/conexionbd.php");
 
                         if($conn){
