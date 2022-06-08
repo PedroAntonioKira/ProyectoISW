@@ -59,12 +59,13 @@
                         while($fila = $resultado->fetch_object()){
                             $id_v = $fila -> ID_VISITA;
                             $fecha = $fila -> FECHA;
-                            $nombre_i = ($fila->NOMBRE) . ''.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
+                            $nombre_i = ($fila->NOMBRE) . ' '.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
                             $nombre_v = ($fila->NOMBRES).' '.($fila->AP_PATERNO_V).' '.($fila->AP_MATERNO_V);
                             $mllegada =$fila -> MDELLEGADA;
                             $placa = $fila ->PLACAS;
-                            if($placa == null){
-                                $placa = "SIN AUTO";
+                           
+                            if($placa == null || strlen($placa) < 5){
+                                $placa = "SIN VEHÍCULO";
                             }
                             
 
@@ -83,10 +84,10 @@
                                     <td style='width: 22%' class='align-middle'>
                                         <input  id='floatingPassword' name='visitante' class='form-control-plaintext' value='$nombre_v'>
                                     </td>
-                                    <td style='width: 15%' class='align-middle'>
+                                    <td style='width: 17%' class='align-middle'>
                                         <input  class='form-control' name='mllegada'  style='font-size: 1.4rem;' value='$mllegada'>
                                     </td>
-                                    <td style='width: 15% ' class='align-middle'>
+                                    <td style='width: 13% ' class='align-middle'>
                                         <input  class='form-control'  style='font-size: 1.4rem;' name='placas' value='$placa'>
                                     </td>
                                     <td>

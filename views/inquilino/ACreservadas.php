@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Áreas Comunes</title>
+    <title>Reservaciones</title>
     
     <!-- Librerias Bootstrap -->
     <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
@@ -28,7 +28,7 @@
 
     <div class="fondo-azul p-5">
         <div class="contenedor fondo-blanco m-auto">
-            <h1 class="pt-5 px-5">Áreas Comunes</h1>
+            <h1 class="p-5">Mis reservaciones</h1>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-9 align-self-center">
@@ -66,10 +66,10 @@
                                                 <td style='width: 19%'  class='align-middle'>
                                                     <input  id='floatingPassword' class='form-control-plaintext' name='id' value='$ided'>
                                                 </td>
-                                                <td style='width: 33%' class='align-middle'>
+                                                <td style='width: 40%' class='align-middle'>
                                                     <input  id='floatingPassword' name='nombre' class='form-control-plaintext' style='font-size: 1.4rem; width: 100%' value='$nombre'>
                                                 </td>
-                                                <td style='width: 33%' class='align-middle'>
+                                                <td style='width: 30%' class='align-middle'>
                                                     <input  id='floatingPassword' name='objetivo' style='font-size: 1.4rem;' class='form-control' value='$fecha' >
                                                 </td>
                                                 
