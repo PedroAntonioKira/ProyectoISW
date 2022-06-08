@@ -63,7 +63,7 @@
                             $mllegada =$fila -> MDELLEGADA;
                             $placa = $fila ->PLACAS;
                             if($placa == null){
-                                $placa = "SIN AUTO";
+                                $placa = "SIN VEHÍCULO";
                             }
                             
 

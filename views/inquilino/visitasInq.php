@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehículos</title>
+    <title>Visitas</title>
     
     <!-- Librerias Bootstrap -->
     <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
@@ -27,12 +27,14 @@
 
     <div class="fondo-azul p-5">
         <div class="contenedor fondo-blanco m-auto">
-            <h1 class="pt-5 px-5">Vehículos</h1>
+            <h1 class="pt-5 px-5">Visitas</h1>
             <div class="parent px-5 ">
                 <div class="div2"> 
                     <?php
-                       
-                        $consulta = "SELECT A.PLACAS AS PLACA, MODELO, MARCA, COLOR, NOMBRE, AP_PATERNO, AP_MATERNO FROM inquilino I, automoviles A, manejar M WHERE I.NUMCONTRATO = M.NUMCONTRATO AND M.PLACAS = A.PLACAS;";
+                        date_default_timezone_set('America/Monterrey');
+                        $fecha = date("Y-m-d");
+                        $inq = $_SESSION["NCONTRATO"];
+                        $consulta = "SELECT ID_VISITA, DATE_FORMAT(FECHA, '%d/%m/%y') AS FECHA, PLACAS, NOMBRES,V.AP_MATERNO AS AP_MATERNO_V , V.AP_PATERNO AS AP_PATERNO_V, NOMBRE, I.AP_MATERNO, I.AP_PATERNO, MDELLEGADA, I.CURP from visitante V, inquilino I WHERE I.NUMCONTRATO =  '$inq' AND V.NUMCONTRATO = I.NUMCONTRATO AND V.CURP = I.CURP ";
                         include("../../php/conexionbd.php");
 
                         if($conn){
@@ -42,9 +44,12 @@
                             <table class="table table-striped table-hover ">
                                 <thead class="table-light">
                                     <tr>
+                                        <th scope="col">ID Visita</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Responsable</th>
+                                        <th scope="col">Nombre Visitante</th>
+                                        <th scope="col">Método de llegada</th>
                                         <th scope="col">Placas</th>
-                                        <th scope="col">Dueño</th>
-                                        <th scope="col">Características</th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -52,21 +57,38 @@
                         <?php
 
                         while($fila = $resultado->fetch_object()){
-                            $placas = $fila -> PLACA;
-                            $dueño = ($fila->NOMBRE) . ''.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
-                            $caracteristicas = ($fila->MODELO).', '.($fila->MARCA).', '.($fila->COLOR);
+                            $id_v = $fila -> ID_VISITA;
+                            $fecha = $fila -> FECHA;
+                            $nombre_i = ($fila->NOMBRE) . ' '.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
+                            $nombre_v = ($fila->NOMBRES).' '.($fila->AP_PATERNO_V).' '.($fila->AP_MATERNO_V);
+                            $mllegada =$fila -> MDELLEGADA;
+                            $placa = $fila ->PLACAS;
+                           
+                            if($placa == null || strlen($placa) < 5){
+                                $placa = "SIN VEHÍCULO";
+                            }
+                            
 
                             echo "
                             <form action='../php/eliminarInquilino.php' method = 'POST'>
                                 <tr>
                                     <td style='width: 10%' class='align-middle'>
-                                        <input  id='floatingPassword' class='form-control-plaintext'  name='ID_Visita' value='$placas'>
+                                        <input  id='floatingPassword' class='form-control-plaintext'  name='ID_Visita' value='$id_v'>
                                     </td>
-                                    <td style='width: 30%' class='align-middle'>
-                                        <input  id='floatingPassword' class='form-control-plaintext'  name='fecha' value='$dueño'>
+                                    <td style='width: 8%' class='align-middle'>
+                                        <input  id='floatingPassword' class='form-control-plaintext'  name='fecha' value='$fecha'>
                                     </td>
-                                    <td style='width: 52%' class='align-middle'>
-                                        <input  id='floatingPassword' name='responsable' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$caracteristicas'>
+                                    <td style='width: 22%' class='align-middle'>
+                                        <input  id='floatingPassword' name='responsable' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$nombre_i'>
+                                    </td>
+                                    <td style='width: 22%' class='align-middle'>
+                                        <input  id='floatingPassword' name='visitante' class='form-control-plaintext' value='$nombre_v'>
+                                    </td>
+                                    <td style='width: 17%' class='align-middle'>
+                                        <input  class='form-control' name='mllegada'  style='font-size: 1.4rem;' value='$mllegada'>
+                                    </td>
+                                    <td style='width: 13% ' class='align-middle'>
+                                        <input  class='form-control'  style='font-size: 1.4rem;' name='placas' value='$placa'>
                                     </td>
                                     <td>
                                         <button type='submit' class='btn btn-light' name='cambiar'>
@@ -89,6 +111,8 @@
                         </table>
                 </div>
             </div>
+
+            
         </div>
     </div>
 

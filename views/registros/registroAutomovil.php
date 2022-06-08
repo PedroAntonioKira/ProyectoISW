@@ -38,20 +38,20 @@
                     <div class="row g-3 pxS-5 ">
                         <div class="col-md-4 form-group ">
                             <label>Placas*</label>
-                            <input required type="text" class="form-control" name="Placas" id="Nombre" autofocus style="font-size: 1.5rem;">
-                            <span class="errorN" aria-live="polite"></span>
+                            <input required type="text" class="form-control" name="Placas" id="Pl" autofocus style="font-size: 1.5rem;">
+                            <span class="errorPl" aria-live="polite"></span>
                         </div>
                         <!-- form-group end.// -->
                         <div class="col-md-4 form-group">
                             <label>Modelo*</label>
-                            <input required type="text" class="form-control" name="Modelo" id="AP" style="font-size: 1.5rem;">
-                            <span class="errorAP" aria-live="polite"></span>
+                            <input required type="text" class="form-control" name="Modelo" id="M" style="font-size: 1.5rem;">
+                            <span class="errorM" aria-live="polite"></span>
                         </div>
                         <!-- form-group end.// -->
                         <div class="col-md-4 form-group">
                             <label>Marca*</label>
-                            <input required type="text" class="form-control" name="Marca" id="AM" style="font-size: 1.5rem;">
-                            <span class="errorAM" aria-live="polite"></span>
+                            <input required type="text" class="form-control" name="Marca" id="MC" style="font-size: 1.5rem;">
+                            <span class="errorMC" aria-live="polite"></span>
                         </div>
                         <!-- form-group end.// -->
                     </div>
@@ -59,8 +59,8 @@
                     <div class="form-group form-row px-5 py-2">
                         <label class="col-md-3 col-form-label" >Color*</label>
                         <div class="col">
-                            <input required type="text" class="form-control mail" placeholder="Ej. rojo, blanco .... " id="Correo_Electronico" name="Color" style="font-size: 1.5rem;">
-                            <span class="errorE" aria-live="polite"></span>
+                            <input required type="text" class="form-control mail" placeholder="Ej. Rojo, Blanco .... " id="C" name="Color" style="font-size: 1.5rem;">
+                            <span class="errorC" aria-live="polite"></span>
                         </div>
                     </div>
                     

@@ -7,7 +7,7 @@
         <div class="d-flex flex-wrap justify-content-end col">
             <ul class="nav">
                 <li class="nav-item">
-                    <a href="../index.php" class="nav-link link-dark px-2 fw-bold">Bienvenido, 
+                    <a href="../../index.php" class="nav-link link-dark px-2 fw-bold">Bienvenido, 
                         <?php 
                             if(session_id() == "usuarioad"){
                               //session_start();
@@ -71,7 +71,7 @@
                               echo '<nav class="navbar navbar-expand-lg azul ">
                               <div class="container-fluid " >
                                 <a class="navbar-brand d-md-none d-sm-block" href="#">
-                                  <img src="../img/LogoCOMSAFE03.png" alt="Logo ComSafe" width="83" height="50">
+                                  <img src="../../img/LogoCOMSAFE03.png" alt="Logo ComSafe" width="83" height="50">
                                 </a>
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                   <span class="navbar-toggler-icon"></span>
@@ -110,25 +110,22 @@
                                 <div class="collapse navbar-collapse d-md-flex justify-content-center" id="navbarNav">
                                   <ul class="navbar-nav sep ">
                                     <li class="nav-item">
-                                      <a class="nav-link " aria-current="page" href="../inicioADMIN.php">Inicio</a>
+                                      <a class="nav-link " aria-current="page" href="../inquilino/inicioInquilino.php">Inicio</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link" href="../consultas/Adinquilinos.php">Familiar</a>
+                                      <a class="nav-link" href="familiares.php">Familiares</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link" href="../consultas/Inmuebles.php">Inmuebles</a>
+                                      <a class="nav-link " href="../inquilino/ACreservadas.php">Reservaciones</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link " href="../consultas/areaComunC.php">Reservar Áreas comúnes</a>
+                                      <a class="nav-link " href="visitasInq.php">Visitas</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link " href="../consultas/visitantes.php">Visitas</a>
+                                      <a class="nav-link " href="reportesInq.php">Reportes</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link " href="../consultas/reportes.php">Reportes</a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link " href="../consultas/reportes.php">Vehiculos</a>
+                                      <a class="nav-link " href="vehiculoInq.php">Vehiculos</a>
                                     </li>
                                   </ul>
                                 </div>
