@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehículos</title>
+    <title>Reportes</title>
     
     <!-- Librerias Bootstrap -->
     <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
@@ -27,14 +27,21 @@
 
     <div class="fondo-azul p-5">
         <div class="contenedor fondo-blanco m-auto">
-            <h1 class="pt-5 px-5">Vehículos</h1>
+            <h1 class="px-5 pt-5">Reportes</h1>
             <div class="parent px-5 ">
                 <div class="div2"> 
-                    <?php
-                       
-                        $consulta = "SELECT A.PLACAS AS PLACA, MODELO, MARCA, COLOR, NOMBRE, AP_PATERNO, AP_MATERNO FROM inquilino I, automoviles A, manejar M WHERE I.NUMCONTRATO = M.NUMCONTRATO AND M.PLACAS = A.PLACAS;";
-                        include("../../php/conexionbd.php");
+                    <div class="d-flex justify-content-end py-3">
+                        <form method="post">
+                            <input type="date" name="fecha" class="align-middle">
+                            <input type="submit" value="BUSCAR" class="btn btn-outline-primary" style="font-size: 1.3rem">
+                        </form>
+                    </div>
 
+                    <?php
+                        $inq = $_SESSION["NCONTRATO"];
+                        $consulta = "SELECT R.ID AS ID_R, R.TIPO AS TIPO_R, DATE_FORMAT(FECHA, '%d/%m/%y') AS FECHA, ESTATUS, DESCRIPCIÓN, I.NOMBRE AS NOMBRE_I, AP_PATERNO, AP_MATERNO from reportes R, inquilino I where  '$inq' = I.NUMCONTRATO AND R.NUMCONTRATO = I.NUMCONTRATO AND R.CURP = I.CURP;";
+                        include("../../php/conexionbd.php");
+                        
                         if($conn){
                             $resultado = mysqli_query($conn, $consulta);
                         }
@@ -42,9 +49,11 @@
                             <table class="table table-striped table-hover ">
                                 <thead class="table-light">
                                     <tr>
-                                        <th scope="col">Placas</th>
-                                        <th scope="col">Dueño</th>
-                                        <th scope="col">Características</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Tipo</th>
+                                        <th scope="col">Hecho por</th>
+                                        <th scope="col">Descripción</th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -52,22 +61,31 @@
                         <?php
 
                         while($fila = $resultado->fetch_object()){
-                            $placas = $fila -> PLACA;
-                            $dueño = ($fila->NOMBRE) . ''.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
-                            $caracteristicas = ($fila->MODELO).', '.($fila->MARCA).', '.($fila->COLOR);
-
+                            $id_r = $fila -> ID_R;
+                            $fecha =$fila -> FECHA;
+                            $nombre = ($fila->NOMBRE_I) . ' '.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
+                            $tipo = $fila -> TIPO_R;
+                            $des = $fila -> DESCRIPCIÓN;
+                            
                             echo "
-                            <form action='../php/eliminarInquilino.php' method = 'POST'>
+                            <form action='' method = 'POST'>
                                 <tr>
-                                    <td style='width: 10%' class='align-middle'>
-                                        <input  id='floatingPassword' class='form-control-plaintext'  name='ID_Visita' value='$placas'>
+                                    <td style='width: 8%' class='align-middle'>
+                                        <input  id='' class='form-control-plaintext'  name='ID_reporte' value='$id_r'>
                                     </td>
-                                    <td style='width: 30%' class='align-middle'>
-                                        <input  id='floatingPassword' class='form-control-plaintext'  name='fecha' value='$dueño'>
+                                    <td style='width: 12%' class='align-middle'>
+                                        <input  id='' name='fecha' class='form-control-plaintext' style='width: 100%; font-size: 1.4rem;' value='$fecha'>
                                     </td>
-                                    <td style='width: 52%' class='align-middle'>
-                                        <input  id='floatingPassword' name='responsable' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$caracteristicas'>
+                                    <td style='width: 12%' class='align-middle'>
+                                        <input  id='' name='tipo' class='form-control-plaintext' value='$tipo'>
                                     </td>
+                                    <td style='width: 22%' class='align-middle'>
+                                        <input  id='' name='nombre' class='form-control-plaintext' style='width: 100%; font-size: 1.4rem;' value='$nombre'>
+                                    </td>
+                                    <td style='width: 38%' class='align-middle'>
+                                        <input  id='' name='descripcion' class='form-control-plaintext' style='width: 100%; font-size: 1.4rem;' value='$des'>
+                                    </td>
+                                   
                                     <td>
                                         <button type='submit' class='btn btn-light' name='cambiar'>
                                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>

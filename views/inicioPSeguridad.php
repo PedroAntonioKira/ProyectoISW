@@ -232,18 +232,18 @@
                                                     while($fila = $resultado->fetch_object()){
                                                         $placas = $fila -> PLACA;
                                                         $dueño = ($fila->NOMBRE) . ''.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
-                                                        $caracteristicas = ($fila->Modelo).', '.($fila->MARCA).', '.($fila->COLOR);
+                                                        $caracteristicas = ($fila->MODELO).', '.($fila->MARCA).', '.($fila->COLOR);
 
                                                         echo "
                                                         <form action='../php/eliminarInquilino.php' method = 'POST'>
                                                             <tr>
-                                                                <td style='width: 8%' class='align-middle'>
+                                                                <td style='width: 10%' class='align-middle'>
                                                                     <input  id='floatingPassword' class='form-control-plaintext'  name='ID_Visita' value='$placas'>
                                                                 </td>
-                                                                <td style='width: 22%' class='align-middle'>
+                                                                <td style='width: 30%' class='align-middle'>
                                                                     <input  id='floatingPassword' class='form-control-plaintext'  name='fecha' value='$dueño'>
                                                                 </td>
-                                                                <td style='width: 42%' class='align-middle'>
+                                                                <td style='width: 52%' class='align-middle'>
                                                                     <input  id='floatingPassword' name='responsable' class='form-control' style='width: 100%; font-size: 1.4rem;' value='$caracteristicas'>
                                                                 </td>
                                                                 <td>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,12 +28,12 @@
 
     <div class="fondo-azul p-5">
         <div class="contenedor fondo-blanco m-auto">
-            <h1 class="pt-5 px-5">Vehículos</h1>
+            <h1 class="pt-5 px-5">Mis Vehículos</h1>
             <div class="parent px-5 ">
                 <div class="div2"> 
                     <?php
-                       
-                        $consulta = "SELECT A.PLACAS AS PLACA, MODELO, MARCA, COLOR, NOMBRE, AP_PATERNO, AP_MATERNO FROM inquilino I, automoviles A, manejar M WHERE I.NUMCONTRATO = M.NUMCONTRATO AND M.PLACAS = A.PLACAS;";
+                        $inq = $_SESSION["NCONTRATO"];
+                        $consulta = "SELECT A.PLACAS AS PLACA, MODELO, MARCA, COLOR, NOMBRE, AP_PATERNO, AP_MATERNO FROM inquilino I, automoviles A, manejar M WHERE I.NUMCONTRATO = '$inq' AND I.NUMCONTRATO = M.NUMCONTRATO AND M.PLACAS = A.PLACAS;";
                         include("../../php/conexionbd.php");
 
                         if($conn){
@@ -53,7 +54,7 @@
 
                         while($fila = $resultado->fetch_object()){
                             $placas = $fila -> PLACA;
-                            $dueño = ($fila->NOMBRE) . ''.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
+                            $dueño = ($fila->NOMBRE) .' '.($fila->AP_PATERNO). ' '.($fila->AP_MATERNO);
                             $caracteristicas = ($fila->MODELO).', '.($fila->MARCA).', '.($fila->COLOR);
 
                             echo "
