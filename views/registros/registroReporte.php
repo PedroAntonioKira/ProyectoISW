@@ -38,12 +38,12 @@
                         <p class="fw-bold fs-3 m-0">Información del reportador</p>
                         <div class="col form-group ">
                             <label>Número de contrato*</label>
-                            <input required type="text" class="form-control" name="NumCont" id="NC" style="font-size: 1.5rem;" value="<?php echo $_SESSION['NCONTRATO']?>">
+                            <input required type="text" class="form-control" name="NumCont" id="NC" style="font-size: 1.5rem;" value="<?php echo $_SESSION['NCONTRATO'];?>">
                             <span class="errorNC" aria-live="polite"></span>
                         </div>
                         <div class="col form-group ">
                             <label>CURP*</label>
-                            <input required type="text" class="form-control" name="Curp" id="C" style="font-size: 1.5rem;" value="<?php echo $_SESSION['CURP']?>">
+                            <input required type="text" class="form-control" name="Curp" id="C" style="font-size: 1.5rem;" value="<?php echo $_SESSION['CURP'];?>">
                             <span class="errorC" aria-live="polite"></span>
                         </div>
                             <!-- form-group end.// -->
