@@ -1,3 +1,10 @@
+<?php 
+    /*session_start();
+    if(1){
+        header ("refresh: 1; url= login.php"); 
+    }else{*/
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -300,3 +307,4 @@
 <script src="../lib/bootstrap/js/bootstrap.min.js" ></script>
 
 </html>
+<?php //}?>

@@ -211,7 +211,7 @@
                                         <div class="parent px-5 ">
                                             <div class="div2"> 
                                                 <?php
-                                                    $consulta = "SELECT A.PLACAS AS PLACA, MODELO, MARCA, COLOR, NOMBRE, AP_PATERNO, AP_MATERNO FROM inquilino I, automoviles A, manejar M WHERE I.NUMCONTRATO = M.NUMCONTRATO AND M.PLACAS = A.PLACAS;";
+                                                    $consulta = "SELECT A.PLACAS AS PLACA, MODELO, MARCA, COLOR, NOMBRE, AP_PATERNO, AP_MATERNO FROM inquilino I, automoviles A, manejar M WHERE I.NUMCONTRATO = M.NUMCONTRATO AND M.PLACAS = A.PLACAS AND I.CURP = M.CURP;";
 
                                                     if($conn){
                                                         $resultado = mysqli_query($conn, $consulta);
