@@ -36,7 +36,8 @@
                             <div class="div2"> 
                                 <?php
                                     $inq = $_SESSION["NCONTRATO"];
-                                    $consulta = "SELECT A.ID, A.NOMBRE, R.FECHA  FROM area_comun A, reservar R, inquilino I WHERE I.NUMCONTRATO = '$inq' AND I.NUMCONTRATO = R.NUMCONTRATO; ";
+                                    $curp =  $_SESSION["CURP"];
+                                    $consulta = "SELECT A.ID, A.NOMBRE, R.FECHA  FROM area_comun A, reservar R, inquilino I WHERE I.NUMCONTRATO = '$inq' AND R.CURP = '$curp' AND I.NUMCONTRATO = R.NUMCONTRATO; ";
                                     include("../../php/conexionbd.php");
 
                                     if($conn){

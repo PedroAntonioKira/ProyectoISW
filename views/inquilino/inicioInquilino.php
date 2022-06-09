@@ -74,7 +74,7 @@
                         </div>
                         <h2>Mis Familiares</h2>
                         <p>Consulte la información registrada sobre sus familiares</p>
-                        <a href="#" class="icon-link d-inline-flex align-items-center">
+                        <a href="familiares.php" class="icon-link d-inline-flex align-items-center">
                         Ir
                         <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
                         </a>
@@ -100,7 +100,7 @@
                         </div>
                         <h2>Mis Visitas</h2>
                         <p>Consulte todas las visitas a su inmueble registradas</p>
-                        <a href="#" class="icon-link d-inline-flex align-items-center">
+                        <a href="visitasInq.php" class="icon-link d-inline-flex align-items-center">
                         Ir
                         <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
                         </a>
@@ -112,15 +112,61 @@
 
     <div class="b-example-divider"></div>
 
-    <div class="p-5">
-        <div class="d-flex flex-row align-items-center justify-content-between">
-            <div class="p-2 ms-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
-                    <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
-                    <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
-                </svg>
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col">
+                <section class="area_section mt-5">
+                    <div class="container p-5">
+                        <h2 class="text-white">Áreas Comunes</h2>
+                    </div>
+                </section>
+                <div class="parent px-5 ">
+                    <div class="div2"> 
+                        <?php
+                            $consulta = "SELECT * FROM area_comun LIMIT 3; ";
+                            include("../../php/conexionbd.php");
+
+                            if($conn){
+                                $resultado = mysqli_query($conn, $consulta);
+                            }
+                            ?>
+                            <ul class="list-group list-group-flush pb-5">
+                            <?php
+
+                            while($fila = $resultado->fetch_object()){
+                                $ided = $fila -> ID;
+                                $nombre = ucwords(strtolower($fila->NOMBRE));
+                                $objetivo =$fila -> OBJETIVO;
+                                $des = ucfirst(mb_strtolower($fila -> DESCRIPCION));
+                                echo "
+                                    <li class='list-group-item'>
+                                        <h5>$nombre</h5>
+                                        <p>$des</p>
+                                        <a href='../inquilino/reservarAC.php' class='alert-link text-danger'>Reservar</a>
+                                    </li>
+                                ";
+                            }
+                        ?>
+                            <a href="../inquilino/areaComunInq.php" class="alert-link text-end">Ver más...</a>
+                            </ul>
+                    </div>
+                </div>
             </div>
-            <div class="p-2">En caso de alguna queja o desconformidad con alguna situación con el inmueble, vecinos, personal, etc. Consulte y registre reportes haciendo <a href="../inquilino/reportesInq.php">click aqui</a>.</div>
+            <div class="col">
+                <div class="p-5">
+                    <div class="flex-row align-items-end p-5">
+                        <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+                            <div class="p-2 ms-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+                                    <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+                                    <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
+                                </svg>
+                            </div>
+                            <div class="p-2">En caso de alguna queja o desconformidad con alguna situación con el inmueble, vecinos, personal, etc. Consulte y registre reportes haciendo <a href="../inquilino/reportesInq.php">click aqui</a>.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
