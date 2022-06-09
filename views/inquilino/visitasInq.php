@@ -111,8 +111,9 @@
                         </table>
                 </div>
             </div>
-
-            
+            <div class="contenedor pb-5 d-flex justify-content-end">
+                <a type="submit" href="../registros/registroVisitas.php" class="btn btn-outline-dark" style="font-size: 1.5rem;">Agregar Vehículo</a>
+            </div>
         </div>
     </div>
 

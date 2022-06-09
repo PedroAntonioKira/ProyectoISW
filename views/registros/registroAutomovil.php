@@ -35,7 +35,7 @@
                 
                 <form action="../../php/registroVehiculos.php" name="Inicioses2" method="post">
                     <!--Nombre completo-->
-                    <div class="row g-3 pxS-5 ">
+                    <div class="row g-3 px-5 ">
                         <div class="col-md-4 form-group ">
                             <label>Placas*</label>
                             <input required type="text" class="form-control" name="Placas" id="Pl" autofocus style="font-size: 1.5rem;">
@@ -64,8 +64,8 @@
                         </div>
                     </div>
                     
-
-                    <div class="form-group d-flex justify-content-end p-5">
+                    <div class="form-group d-flex justify-content-between p-md-5 pt-5">
+                        <a type="submit" href="../inquilino/vehiculoInq.php" class="btn btn-outline-primary" name="btnC" id="btnC" value="Cancelar" style="font-size: 1.5rem;">Cancelar</a>
                         <input type="submit" class="btn btn-outline-dark" name="btnR" id="btn" value="Registrar" style="font-size: 1.5rem;">
                     </div>
                     <!-- form-group// -->

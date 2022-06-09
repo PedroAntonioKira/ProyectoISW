@@ -181,12 +181,15 @@ nc.addEventListener('input', function(event) {
 });
 
 function showErrorNC() {
-    if (nc.value.length === 0) {
+    if (nc.value.length === 0 ) {
         ncError.textContent = 'Ingresa el número de contrato';
         ncError.className = 'error active';
         return true;
-    }
-    if (!regexNC.test(nc.value)) {
+    } else if (nc.value.length < 10) {
+        ncError.textContent = '10 caracteres como mínimo';
+        ncError.className = 'error active';
+        return true;
+    } else if (!regexNC.test(nc.value)) {
         ncError.textContent = 'Número de contrato no válido';
         ncError.className = 'error active';
         return true;

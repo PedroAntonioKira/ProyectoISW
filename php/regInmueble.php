@@ -22,7 +22,7 @@
         $resultado = mysqli_query($conn, $consulta);
         if($resultado){
             echo '<script language="javascript">alert("Inmueble registrada exitosamente!");</script>';
-            header ("refresh: 1; url= ../views/registroInmueble.php"); 
+            header ("refresh: 1; url= ../views/registros/registroInmueble.php"); 
             /*mysqli_free_result($resultado);
             mysqli_close($conn);*/
         }else{
@@ -30,7 +30,7 @@
             mysqli_close($conn);
             //echo "REchazado :(";*/
             echo '<script language="javascript">alert("OH no! Ha ocurrido un error");</script>';
-            header ("refresh: 1; url= ../views/registroInmueble.php");
+            header ("refresh: 1; url= ../views/registros/registroInmueble.php");
         }
     }
 ?>

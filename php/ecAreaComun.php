@@ -15,7 +15,7 @@
             mysqli_close($conn);
             //echo "REchazado :(";
             echo '<script language="javascript">alert("Ha ocurriod un error");</script>';
-            header ("refresh: 1; url= ../../views/consultas_Admin/Inmuebles.php");
+            header ("refresh: 1; url= ../../views/consultas/Inmuebles.php");
         }
     }else if(isset($_POST['cambiar'])){
         $nomac = trim($_POST['nombre']);
@@ -29,13 +29,13 @@
         $resultado = mysqli_query($conn, $consulta);
         
         if($resultado){
-            header ("refresh: 1; url= ../../views/consultas_Admin/Inmuebles.php");
+            header ("refresh: 1; url= ../../views/consultas/Inmuebles.php");
             echo '<script language="javascript">alert("Datos Actualizados");</script>';
         }else{
             mysqli_free_result($resultado);
             mysqli_close($conn);
             //echo "REchazado :(";
-            echo '<script language="javascript">alert("Ha ocurriod un error");</script>';
+            echo '<script language="javascript">alert("Ha ocurrido un error");</script>';
             header ("refresh: 1; url= ./../Inmuebles.php");
         }
         

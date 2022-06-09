@@ -44,12 +44,7 @@
                             <span class="errorNAC" aria-live="polite"></span>
                         </div>
                         <!-- form-group end.// -->
-                        <div class="col-md-4 form-group mt-0">
-                            <label>Cantidad de personas*</label>
-                            <input required type="text" class="form-control" name="Personas" id="CP" style="font-size: 1.3rem;" >
-                            <span class="errorCP" aria-live="polite"></span>
-                        </div>
-                        <!-- form-group end.// -->
+                        
                     </div>
                     <div class="row g-3 px-5 pt-4">
                         <!-- form-group end.// -->
@@ -77,7 +72,7 @@
                     </div>
                     <!-- form-group// -->
                 </form>
-                <script src=""></script>
+                <script src="../../js/validaciones/validAC.js"></script>
             </article>
             <!-- card-body end .// -->
             <div class="card-footer text-center text-muted">© 2022 ComSafe. </div>

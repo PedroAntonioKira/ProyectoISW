@@ -39,7 +39,7 @@
             <a class="nav-link" href="../views/consultas/Adinquilinos.php">Inquilinos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link " href="../views/consultas/areaComunC.php">Vehículos</a>
+            <a class="nav-link " href="../views/consultas/vehiculos.php">Vehículos</a>
         </li>
         <li class="nav-item">
             <a class="nav-link " href="../views/consultas/visitantes.php">Visitas</a>

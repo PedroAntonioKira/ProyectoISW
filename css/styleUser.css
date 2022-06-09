@@ -15,3 +15,12 @@
     height: 5rem;
     border-radius: .75rem;
 }
+
+.area_section{
+    background-image: url(../img/acom.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+}

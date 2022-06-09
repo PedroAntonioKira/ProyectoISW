@@ -17,10 +17,10 @@
         $resultado = mysqli($conn, $consulta);
         if($resultado){
             echo '<script language="javascript">alert("Reporte registrado exitosamente!");</script>';
-            header ("refresh: 1; url= ../views/registroReportes.php"); 
+            header ("refresh: 1; url= ../views/registros/registroReportes.php"); 
         }else{
             echo '<script language="javascript">alert("OH no! Ha ocurrido un error");</script>';
-            header ("refresh: 1; url= ../views/registroReportes.php");
+            header ("refresh: 1; url= ../views/registros/registroReportes.php");
         }
     }
 

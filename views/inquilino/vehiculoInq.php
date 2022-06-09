@@ -33,7 +33,7 @@
                 <div class="div2"> 
                     <?php
                         $inq = $_SESSION["NCONTRATO"];
-                        $consulta = "SELECT A.PLACAS AS PLACA, MODELO, MARCA, COLOR, NOMBRE, AP_PATERNO, AP_MATERNO FROM inquilino I, automoviles A, manejar M WHERE I.NUMCONTRATO = '$inq' AND I.NUMCONTRATO = M.NUMCONTRATO AND M.PLACAS = A.PLACAS;";
+                        $consulta = "SELECT A.PLACAS AS PLACA, MODELO, MARCA, COLOR, NOMBRE, AP_PATERNO, AP_MATERNO FROM inquilino I, automoviles A, manejar M WHERE I.NUMCONTRATO = '$inq' AND I.NUMCONTRATO = M.NUMCONTRATO AND I.CURP = M.CURP AND M.PLACAS = A.PLACAS;";
                         include("../../php/conexionbd.php");
 
                         if($conn){
@@ -89,6 +89,9 @@
                         </tbody>
                         </table>
                 </div>
+            </div>
+            <div class="contenedor pb-5 d-flex justify-content-end">
+                <a type="submit" href="../registros/registroAutomovil.php" class="btn btn-outline-dark" style="font-size: 1.5rem;">Agregar Vehículo</a>
             </div>
         </div>
     </div>
