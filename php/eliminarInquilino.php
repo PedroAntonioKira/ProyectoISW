@@ -9,14 +9,14 @@
         $resultado = mysqli_query($conn, $consulta);
         
         if($resultado){
-            header ("refresh: 1; url= ../views/Adinquilinos.php");
+            header ("refresh: 1; url= ../views/consultas/Adinquilinos.php");
             echo '<script language="javascript">alert("Inquilino Eliminado");</script>';
         }else{
             mysqli_free_result($resultado);
             mysqli_close($conn);
             //echo "REchazado :(";
             echo '<script language="javascript">alert("Ha ocurriod un error");</script>';
-            header ("refresh: 1; url= ../views/Adinquilinos.php");
+            header ("refresh: 1; url= ../views/consultas/Adinquilinos.php");
         }
     }else if(isset($_POST['cambiar'])){
         $nombre = trim($_POST['nombre']);

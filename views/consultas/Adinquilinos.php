@@ -90,7 +90,7 @@
                                     ";
                             } else {
                                 echo "
-                                    <form action='../php/eliminarInquilino.php' method = 'POST'>
+                                    <form action='../../php/eliminarInquilino.php' method = 'POST'>
                                         <tr>
                                             <td style='width: 12%' class='align-middle'>
                                                 <input  id='floatingPassword' class='form-control-plaintext'  name='numcontrato' value='$numcontrato'>

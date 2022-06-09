@@ -15,7 +15,7 @@
             $consulta2 = "INSERT INTO MANEJAR VALUES('$_SESSION[NCONTRATO]', '$_SESSION[CURP]', '$placas');";
 
             echo '<script language="javascript">alert("Vehículo registrado exitosamente!");</script>';
-            header ("refresh: 1; url= ../views/registroVehiculos.php"); 
+            header ("refresh: 1; url= ../views/registros/registroAutomovil.php"); 
             mysqli_free_result($resultado);
             mysqli_close($conn);
         }

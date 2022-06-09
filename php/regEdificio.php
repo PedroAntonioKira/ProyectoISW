@@ -12,7 +12,7 @@
         $resultado = mysqli_query($conn, $consulta);
         if($resultado){
             echo '<script language="javascript">alert("Seccion registrada exitosamente!");</script>';
-            header ("refresh: 1; url= ../views/consultas_Admin/edificios.php"); 
+            header ("refresh: 1; url= ../views/consultas/edificios.php"); 
             /*mysqli_free_result($resultado);
             mysqli_close($conn);*/
         }else{

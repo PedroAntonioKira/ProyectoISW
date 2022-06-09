@@ -18,7 +18,7 @@
             mysqli_close($conn);
             //echo "REchazado :(";
             echo '<script language="javascript">alert("Ha ocurriod un error");</script>';
-            header ("refresh: 1; url= ./../Inmuebles.php");
+            header ("refresh: 1; url= ./../Vehiculos.php");
         }
     }else if(isset($_POST['cambiar'])){
         $modelo = trim($_POST['modelo']);
@@ -32,14 +32,14 @@
         
         if($resultado){
             $consulta2 = "UPDATE MANEJAR SET PLACAS = '$placas' WHERE NUMCONTRATO = '$_SESSION[NCONTRATO]' AND CURP = '$_SESSION[CURP]';";
-            header ("refresh: 1; url= ./../Inmuebles.php");
+            header ("refresh: 1; url= ./../Vehiculos.php");
             echo '<script language="javascript">alert("Datos Actualizados");</script>';
         }else{
             mysqli_free_result($resultado);
             mysqli_close($conn);
             //echo "REchazado :(";
             echo '<script language="javascript">alert("Ha ocurriod un error");</script>';
-            header ("refresh: 1; url= ./../Inmuebles.php");
+            header ("refresh: 1; url= ./../Vehiculos.php");
         }
         
     }
